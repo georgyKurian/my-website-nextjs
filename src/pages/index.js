@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import DefaultLayout from "../components/Layout/DefaultLayout";
 
 export default function Home() {
@@ -10,8 +9,7 @@ export default function Home() {
             <h1>Hi, I’m Georgi. Nice to meet you!</h1>
             <p className="text-center text-gray-200">I am a developer who is enthusiastic about finding solutions and performance optimization.</p>
           </div>
-        </div>
-         Home Page
+        </div>         
       </section>
     </DefaultLayout>
   )

@@ -14,15 +14,13 @@ const DefaultLayout = ({
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
       </Head>
-      <div>
-        <Header>
-          {headerContent}
-        </Header>
-        <div style={{ minHeight: '100vh' }}>
+             
+        <div className="relative" style={{ minHeight: '100vh' }}>
+            <Header>{headerContent}</Header>
             <main className={`w-full`} >{children}</main>
             <Footer />
         </div>        
-      </div>
+      
     </>
   );
 };
