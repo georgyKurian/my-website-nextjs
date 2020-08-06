@@ -1,0 +1,111 @@
+{
+  "database": [
+    {
+      "name": "MySQL",
+      "percentage": "90%"
+    },
+    {
+      "name": "Postgrel",
+      "percentage": "90%"
+    },
+    {
+      "name": "MongoDB",
+      "percentage": "50%"
+    },
+    {
+      "name": "SQLite",
+      "percentage": "50%"
+    }
+  ],
+  "server-side": [
+    {
+      "name": "PHP",
+      "frameworks": [
+        "Laravel",
+        "Symfony",
+        "Wordpress"
+      ],
+      "percentage": "95%"
+    },
+    {
+      "name": "Node",
+      "frameworks": [
+        "Express.js"
+      ],
+      "percentage": "65%"
+    },
+    {
+      "name": "Java",
+      "frameworks": [
+        "Grails",
+        "Hibernate"
+      ],
+      "percentage": "70%"
+    }
+  ],
+  "front-end": [
+    {
+      "name": "Vue.js",
+      "frameworks": null,
+      "percentage": "70%"
+    },
+    {
+      "name": "React.js",
+      "frameworks": [
+        "Next.js"
+      ],
+      "percentage": "80%"
+    },
+    {
+      "name": "Redux.js",
+      "frameworks": [],
+      "percentage": "80%"
+    },
+    {
+      "name": "Apcahe cordova",
+      "percentage": "60%"
+    },
+    {
+      "name": "Webpack",
+      "percentage": "80%"
+    }
+  ],
+  "Dev - tools": [
+    {
+      "name": "GIT",
+      "percentage": "90%"
+    },
+    {
+      "name": "VS Code",
+      "percentage": "80%"
+    },
+    {
+      "name": "Postman",
+      "percentage": "60%"
+    }
+  ],
+  "cloud-services": [
+    {
+      "name": "AWS",
+      "percentage": "70%"
+    },
+    {
+      "name": "Bugsnag",
+      "percentage": "70%"
+    },
+    {
+      "name": "Microsoft 365",
+      "percentage": "60%"
+    },
+    {
+      "name": "Google API",
+      "percentage": "60%"
+    }
+  ],
+  "others": [
+    {
+      "name": "Docker",
+      "percentage": "50%"
+    }
+  ]
+}
