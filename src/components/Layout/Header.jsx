@@ -3,7 +3,7 @@ const { default: Menu } = require("./Menu")
 const Header = () => {
     return (
         <header>
-            <div className="fixed w-full h-16">
+            <div className="fixed w-full h-16 lightBlueGradient">
                 <div className="inner-wrap h-full flex justify-center items-center">
                     <Menu></Menu>
                 </div>            

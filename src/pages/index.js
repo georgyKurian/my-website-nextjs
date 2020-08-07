@@ -3,8 +3,9 @@ import GitHubLogo from '../assets/images/icons/github.svg';
 import EmailLogo from '../assets/images/icons/email.svg';
 import LinkedinLogo from '../assets/images/icons/linkedin.svg';
 import StackOverFlowLogo from '../assets/images/icons/stackoverflow.svg';
+import { getSkillData } from "../api/SkillsAPI";
 
-export default function Home() {
+export default function Home({skillData}) {
   const cssClasses="w-1/5 md:w-16 p-2 hover:p-1 focus:p-1 opacity-75 hover:opacity-100 focus:opacity-100 m-1";
   return (
     <DefaultLayout title="Home">
@@ -34,6 +35,18 @@ export default function Home() {
             </a>
         </div>         
       </section>
+      <section>
+        {JSON.stringify(skillData)}
+      </section>
     </DefaultLayout>
   )
+}
+
+export async function getStaticProps() {
+  const skillData = getSkillData();
+  return {
+    props: {
+      skillData
+    }
+  }
 }

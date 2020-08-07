@@ -15,9 +15,9 @@ const DefaultLayout = ({
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
       </Head>
              
-        <div className="relative" style={{ minHeight: '100vh' }}>
+        <div className="relative flex flex-col" style={{ minHeight: '100vh' }}>
             <Header>{headerContent}</Header>
-            <main className={`w-full`} >{children}</main>
+            <main className={`w-full flex-1`} >{children}</main>
             <Footer />
         </div>        
       
