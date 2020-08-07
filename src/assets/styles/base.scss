@@ -3,12 +3,20 @@ html {
   font-size: 16px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @apply leading-tight;
+}
+
 h1 {
-  @apply text-5xl font-semibold;
+  @apply text-5xl font-semibold text-center mb-3;
 }
 
 h2 {
-  @apply text-3xl;
+  @apply text-3xl mb-12 uppercase;
 }
 
 h3 {

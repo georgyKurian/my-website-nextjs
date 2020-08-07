@@ -3,7 +3,8 @@ import GitHubLogo from '../assets/images/icons/github.svg';
 import EmailLogo from '../assets/images/icons/email.svg';
 import LinkedinLogo from '../assets/images/icons/linkedin.svg';
 import StackOverFlowLogo from '../assets/images/icons/stackoverflow.svg';
-import { getSkillData } from "../api/SkillsAPI";
+import { getSkillsData } from "../api/DataAPI";
+import SkillGroup from "../components/Portfolio/SkillGroup";
 
 export default function Home({skillData}) {
   const cssClasses="w-1/5 md:w-16 p-2 hover:p-1 focus:p-1 opacity-75 hover:opacity-100 focus:opacity-100 m-1";
@@ -16,10 +17,10 @@ export default function Home({skillData}) {
             <p className="text-center text-gray-200">I am a developer who is enthusiastic about finding solutions and performance optimization.</p>
           </div>
         </div>
-        <div id="contact" class="flex flex-wrap w-full justify-center md:flex-row py-16">
+        <div id="contact" className="flex flex-wrap w-full justify-center md:flex-row py-16">
             <a href="https://github.com/georgyKurian" title="GitHub profile link" className={cssClasses}>
               <GitHubLogo className="text-white fill-current w-full h-full" aria-hidden="true"/>
-              <span className="sr-only">GitHub</span>              
+              <span className="sr-only">GitHub</span>
             </a>
             <a href="https://linkedin.com/in/georgi-kurian/" title="Linkedin profile link" className={cssClasses}>
               <LinkedinLogo className="text-white fill-current w-full h-full" aria-hidden="true"/>
@@ -31,19 +32,28 @@ export default function Home({skillData}) {
             </a>
             <a href="https://stackoverflow.com/users/10349395/georgy-varghese-kurian" title="Stackoverflow profile link" className={cssClasses}>
               <StackOverFlowLogo className="text-white fill-current w-full h-full" aria-hidden="true"/>
-              <span className="sr-only">Stackoverflow</span>              
+              <span className="sr-only">Stackoverflow</span>
             </a>
-        </div>         
+        </div>
       </section>
-      <section>
-        {JSON.stringify(skillData)}
+      <section className="section">
+        <div className="inner-wrap flex flex-col">
+          <h2 className="text-center">Skills</h2>
+          <div className="mx-auto w-2/3 sm:w-full lg:lg:w-2/3">
+            <div className="lg:mx-auto lg:w-2/3 grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+              {Object.keys(skillData).map((skillGroupName)=>(
+                <SkillGroup key={skillGroupName} groupName={skillGroupName} skillList={skillData[skillGroupName]} />
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
     </DefaultLayout>
   )
 }
 
 export async function getStaticProps() {
-  const skillData = getSkillData();
+  const skillData = getSkillsData();
   return {
     props: {
       skillData
