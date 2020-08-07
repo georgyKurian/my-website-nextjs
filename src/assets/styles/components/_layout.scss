@@ -1,0 +1,19 @@
+.inner-wrap {
+  @apply px-1 mx-auto;
+  @screen sm {
+    width: 640px;
+    @apply px-2;
+  }
+  @screen md {
+    width: 960px;
+    @apply px-3;
+  }
+  @screen lg {
+    width: 1280px;
+    @apply px-4;
+  }
+  @screen xl {
+    width: 1600px;
+    @apply px-5;
+  }
+}
