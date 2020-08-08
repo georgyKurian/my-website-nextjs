@@ -1,6 +1,4 @@
-import fs from 'fs'
-import path from 'path'
-import { getJSONDataFromFile } from './jsonFileRead';
+import getJSONDataFromFile from './jsonFileRead';
 
 export function getSkillsData() {
   const skillsData = getJSONDataFromFile('my_skills.json');
