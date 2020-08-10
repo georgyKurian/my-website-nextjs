@@ -13,11 +13,11 @@ const HomePage = ({ skillData, projectDataList, workExperienceDataList }) => {
   const cssClasses = 'w-1/5 md:w-16 p-2 hover:p-1 focus:p-1 opacity-75 hover:opacity-100 focus:opacity-100 m-1';
   return (
     <DefaultLayout title="Home">
-      <section className="w-full overflow-hidden bg-blue-200 bg-top bg-cover lightBlueGradient">
+      <section className="w-full overflow-hidden">
         <div className="flex items-center w-full">
           <div className="container flex flex-col items-center justify-around mx-auto mt-40 mb-16">
-            <h1 className="text-white">Hi, I’m Georgi. Nice to meet you!</h1>
-            <p className="text-center text-gray-200">I am a developer who is enthusiastic about finding solutions and performance optimization.</p>
+            <h1 className="">Hi, I’m Georgi. Nice to meet you!</h1>
+            <p className="text-center text-gray-800">I am a full-stack web developer.</p>
           </div>
         </div>
         <div id="contact" className="flex flex-wrap justify-center w-full py-16 md:flex-row">
