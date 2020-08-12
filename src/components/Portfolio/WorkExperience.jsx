@@ -4,18 +4,15 @@ import BriefcaseSVG from '../../assets/images/icons/briefcase.svg';
 const WorkExperience = ({
   companyName, position, timeline, companyUrl,
 }) => (
-  <div className="flex justify-center w-full">
-    <div className="md:w-1/3" />
-    <div className="flex flex-col items-center">
-      <div className="w-1 h-3">&nbsp;</div>
-      <div className="w-8 h-8 p-1 bg-blue-500 border-4 border-blue-500 rounded-full">
+  <div className="relative flex">
+    <div className="absolute inset-y-0 flex flex-col items-center -ml-4">
+      <div className="w-8 h-8 p-1 my-auto bg-blue-800 border-4 border-blue-800 rounded-full">
         <img src="/briefcase.svg" aria-hidden="true" alt="" />
       </div>
-      <div className="flex-1 w-1 bg-blue-500">&nbsp;</div>
     </div>
-    <div className="flex w-2/3 pb-10 pl-3">
-      <div>
-        <div className="text-gray-700">
+    <div className="flex w-full my-2">
+      <div className="flex-1 p-4 bg-blue-800 rounded">
+        <div className="text-gray-100">
           <a href={companyUrl} target="_blank" rel="noreferrer external">
             <h4 className="m-0 text-base">{companyName}</h4>
           </a>

@@ -40,6 +40,23 @@ const HomePage = ({ skillData, projectDataList, workExperienceDataList }) => {
         </div>
       </section>
 
+      <section className="section lightBlueGradient">
+        <div id="skills-section" className="flex flex-col inner-wrap">
+          <h2 className="text-center text-white">Experience</h2>
+          <div className="w-auto mx-auto">
+            {workExperienceDataList.map((workExperienceData) => (
+              <WorkExperience
+                key={workExperienceData.index}
+                companyName={workExperienceData.companyName}
+                position={workExperienceData.position}
+                timeline={workExperienceData.timeline}
+                companyUrl={workExperienceData.companyUrl}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="section">
         <div id="projects-section" className="flex flex-col inner-wrap">
           <h2 className="text-center">Projects</h2>
@@ -74,23 +91,6 @@ const HomePage = ({ skillData, projectDataList, workExperienceDataList }) => {
                 />
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div id="skills-section" className="flex flex-col inner-wrap">
-          <h2 className="text-center">Skills</h2>
-          <div className="w-2/3 mx-auto sm:w-full lg:lg:w-2/3">
-            {workExperienceDataList.map((workExperienceData) => (
-              <WorkExperience
-                key={workExperienceData.index}
-                companyName={workExperienceData.companyName}
-                position={workExperienceData.position}
-                timeline={workExperienceData.timeline}
-                companyUrl={workExperienceData.companyUrl}
-              />
-            ))}
           </div>
         </div>
       </section>
