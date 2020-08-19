@@ -11,9 +11,11 @@ const SkillGroup = ({groupName, skillList}) => {
           <ul className="w-full">
             {skillList.map((skill)=>(
               <li key={skill.name} className="mb-2">
-                <div className="py-1 text-xs font-semibold">{skill.name}<span className="sr-only"> - {skill.percent}</span></div>
+                <div className="py-1 text-xs font-semibold">{skill.name}<span className="sr-only">{` - ${skill.percent}`}</span></div>
                 <div className="w-full bg-gray-700 h-1 rounded">
-                  <div className="w-full bg-blue-500 h-1" style={{width: `${skill.percent}` }}></div>
+                  <div className="w-full h-1" style={{width: `${skill.percent}` }}>
+                    <div className={'bg-blue-500 skill-bar h-full'}></div>
+                  </div>
                 </div>
             </li>
             ))}
