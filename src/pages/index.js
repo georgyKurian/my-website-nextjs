@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { useRef, useEffect } from 'react';
 import DefaultLayout from '../components/Layout/DefaultLayout';
 import GitHubLogo from '../assets/images/icons/github.svg';
 import EmailLogo from '../assets/images/icons/email.svg';
@@ -8,19 +9,18 @@ import { getSkillsData, getProjectsData, getWorkExperienceData } from '../api/Da
 import SkillGroup from '../components/Portfolio/SkillGroup';
 import Project from '../components/Portfolio/Project';
 import WorkExperience from '../components/Portfolio/WorkExperience';
-import { useRef, useEffect } from 'react';
 import { useIntersect } from '../components/Layout/useIntersect';
 
 const HomePage = ({ skillData, projectDataList, workExperienceDataList }) => {
   const cssClasses = 'w-1/5 md:w-16 p-2 hover:p-1 focus:p-1 opacity-75 hover:opacity-100 focus:opacity-100 m-1';
   const skillsSectionRef = useRef(null);
-  const [setNode, entry] = useIntersect({rootMargin:"-20%"});
+  const [setNode, entry] = useIntersect({ rootMargin: '-20%' });
 
   useEffect(() => {
-    if( skillsSectionRef.current ) {
+    if (skillsSectionRef.current) {
       setNode(skillsSectionRef.current);
     }
-  }, [skillsSectionRef])
+  }, [skillsSectionRef]);
 
   return (
     <DefaultLayout title="Home">
@@ -92,7 +92,7 @@ const HomePage = ({ skillData, projectDataList, workExperienceDataList }) => {
       <section className="section">
         <div id="skills-section" className="flex flex-col inner-wrap">
           <h2 className="text-center">Skills</h2>
-          <div className={`w-2/3 mx-auto sm:w-full lg:lg:w-2/3 ${entry?'loaded':''}`} ref={skillsSectionRef}>
+          <div className={`w-2/3 mx-auto sm:w-full lg:lg:w-2/3 ${entry ? 'loaded' : ''}`} ref={skillsSectionRef}>
             <div className="lg:mx-auto lg:w-2/3 grid sm:grid-cols-2 md:grid-cols-3 gap-4">
               {Object.keys(skillData).map((skillGroupName) => (
                 <SkillGroup
