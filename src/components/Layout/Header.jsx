@@ -1,14 +1,60 @@
+import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+
 const { default: Menu } = require('./Menu');
 
-const Header = () => (
-  <header>
-    <div className="fixed z-20 w-full h-16 bg-white border-b border-themeGray-600">
-      <div className="flex items-center justify-center h-full inner-wrap">
-        <Menu />
+const Header = ({ pageWrapperElement }) => {
+  const [scrollY, setScrollY] = useState({ offset: 0, isGoingUp: true });
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isMenuClosing, setMenuClosing] = useState(false);
+
+  function handleScroll() {
+    const currentScrollPos = window.pageYOffset;
+    if (scrollY.offset > currentScrollPos) {
+      setScrollY({ offset: currentScrollPos, isGoingUp: true });
+    } else {
+      setScrollY({ offset: currentScrollPos, isGoingUp: false });
+    }
+  }
+
+  function handleMenuOpenButtonClick() {
+    setMenuOpen(true);
+    pageWrapperElement.current.classList.add('fixed');
+  }
+
+  function handleMenuCloseButtonClick() {
+    setMenuClosing(true);
+    setTimeout(() => {
+      setMenuOpen(false);
+      setMenuClosing(false);
+    }, 1000);
+
+    pageWrapperElement.current.classList.remove('fixed');
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  });
+  return (
+    <header>
+      <div className={`fixed top-menu-bar ${!scrollY.isGoingUp ? 'hide' : ''} z-20 w-full h-16 bg-white border-b border-grey-500`}>
+        <div className="flex items-center justify-center h-full inner-wrap">
+          <Menu />
+        </div>
       </div>
-    </div>
-    <div className="h-16" />
-  </header>
-);
+      <div className="h-16" />
+    </header>
+  );
+};
+
+Header.propTypes = {
+  pageWrapperElement: PropTypes.oneOfType([
+    PropTypes.shape({
+      // eslint-disable-next-line react/forbid-prop-types
+      current: PropTypes.any,
+    }),
+  ]).isRequired,
+};
 
 export default Header;

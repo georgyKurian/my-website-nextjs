@@ -16,8 +16,8 @@ const HomePage = ({ skillData, projectDataList, workExperienceDataList }) => {
       <section className="w-full overflow-hidden">
         <div className="flex items-center w-full">
           <div className="container flex flex-col items-center justify-around mx-auto mt-40 mb-16">
-            <h1 className="">Hi, I’m Georgi. Nice to meet you!</h1>
-            <p className="text-center text-gray-800">I am a full-stack web developer.</p>
+            <h1 className="">Hi, I’m Georgi Kurian.</h1>
+            <p className="text-2xl text-center text-gray-800 uppercase">I am a full-stack web developer</p>
           </div>
         </div>
         <div id="contact" className="flex flex-wrap justify-center w-full py-16 md:flex-row">
