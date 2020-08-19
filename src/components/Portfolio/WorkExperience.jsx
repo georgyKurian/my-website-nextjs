@@ -6,12 +6,14 @@ const WorkExperience = ({
 }) => (
   <div className="relative flex">
     <div className="absolute inset-y-0 flex flex-col items-center -ml-4">
-      <div className="w-8 h-8 p-1 my-auto bg-blue-800 border-4 border-blue-800 rounded-full">
-        <img src="/briefcase.svg" aria-hidden="true" alt="" />
+      <div className="border-4 border-transparent rounded-full my-auto ">
+        <div className="w-6 h-6 p-1 lightBlueGradient rounded-full">
+          <img src="/briefcase.svg" aria-hidden="true" alt="" />
+        </div>
       </div>
     </div>
     <div className="flex w-full my-2">
-      <div className="flex-1 p-4 bg-blue-800 rounded">
+      <div className="flex-1 pl-6 p-4 bg-blue-800 rounded">
         <div className="text-gray-100">
           <a href={companyUrl} target="_blank" rel="noreferrer external">
             <h4 className="m-0 text-base">{companyName}</h4>

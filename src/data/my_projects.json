@@ -1,6 +1,6 @@
 [
   {
-    "title": "E-Commerce App (Mern)",
+    "title": "E-Commerce App (MERN)",
     "description": "A basic e-commerce app.",
     "tags": [
       "next.js",
@@ -19,14 +19,9 @@
     }
   },
   {
-    "title": "Todo App (Mern)",
+    "title": "Todo App (MERN)",
     "description": "A simple todo app for exploring technologies.",
-    "tags": [
-      "node.js",
-      "react.js",
-      "express.js",
-      "mongodb"
-    ],
+    "tags": ["node.js", "react.js", "express.js", "mongodb"],
     "git": "https://github.com/georgyKurian/mern-todo-app",
     "link": ""
   }
