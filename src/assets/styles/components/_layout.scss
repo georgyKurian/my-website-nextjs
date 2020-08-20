@@ -1,19 +1,35 @@
 .inner-wrap {
-  @apply px-1 mx-auto;
+  @apply px-4 mx-auto;
   @screen sm {
     width: 640px;
-    @apply px-2;
+    @apply px-5;
   }
   @screen md {
     width: 960px;
-    @apply px-3;
+    @apply px-6;
   }
   @screen lg {
     width: 1280px;
-    @apply px-4;
+    @apply px-8;
   }
   @screen xl {
     width: 1600px;
-    @apply px-5;
+    @apply px-10;
+  }
+}
+
+.section{
+  @apply py-16;
+  @screen sm {
+    @apply py-16;
+  }
+  @screen md {
+    @apply py-20;
+  }
+  @screen lg {
+    @apply py-24;
+  }
+  @screen xl {
+    @apply py-32;
   }
 }

@@ -1,8 +1,8 @@
 [
   {
-    "title": "E-Commerce App (Mern)",
+    "title": "E-Commerce App (MERN)",
     "description": "A basic e-commerce app.",
-    "techs": [
+    "tags": [
       "next.js",
       "redux.js",
       "jwt",
@@ -11,7 +11,7 @@
       "express.js",
       "mongodb"
     ],
-    "git_url": "https://github.com/georgyKurian/e-commerce-client-next",
+    "git": "https://github.com/georgyKurian/e-commerce-client-next",
     "link": "https://e-commerce-client-next.herokuapp.com/",
     "image": {
       "file": "e-commerce-ui.jpg",
@@ -19,10 +19,10 @@
     }
   },
   {
-    "title": "Todo App (Mern)",
+    "title": "Todo App (MERN)",
     "description": "A simple todo app for exploring technologies.",
-    "techs": ["node.js", "react.js", "express.js", "mongodb"],
-    "git_url": "https://github.com/georgyKurian/mern-todo-app",
+    "tags": ["node.js", "react.js", "express.js", "mongodb"],
+    "git": "https://github.com/georgyKurian/mern-todo-app",
     "link": ""
   }
 ]

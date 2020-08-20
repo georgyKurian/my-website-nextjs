@@ -2,9 +2,11 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"path": "..\\my-website"
 		}
-	]
+	],
+	"settings": {
+		"eslint.format.enable": true,
+		"editor.formatOnSave": true,
+		"eslint.alwaysShowStatus": true
+	}
 }

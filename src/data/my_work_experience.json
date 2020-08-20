@@ -1,20 +1,23 @@
 [
   {
-    "company_name": "Worksitesafety Compliance center",
+    "index": 1,
+    "companyName": "Worksitesafety Compliance center",
     "position": "Full Stack Developer",
     "timeline": "Jan, 2018 - Today",
-    "company_url":"https://worksite.ca/"
+    "companyUrl": "https://worksite.ca/"
   },
   {
-    "company_name": "Lambton Applied Research",
-    "position": "Full Stack Developer",
+    "index": 2,
+    "companyName": "Lambton Applied Research",
+    "position": "Full Stack Developer / Applied Research Student",
     "timeline": "Sep, 2016 - Jan, 2018",
-    "company_url":"https://www.lambtoncollege.ca/Applied-Research/"
+    "companyUrl": "https://www.lambtoncollege.ca/Applied-Research/"
   },
   {
-    "company_name": "HCL Tech",
-    "position": "Full Stack Developer",
+    "index": 3,
+    "companyName": "HCL Tech",
+    "position": "Full Stack Developer / Software Engineer",
     "timeline": "May, 2014 - Aug, 2016",
-    "company_url":"https://www.hcltech.com/"
+    "companyUrl": "https://www.hcltech.com/"
   }
 ]
