@@ -24,11 +24,11 @@ const HomePage = ({ skillData, projectDataList, workExperienceDataList }) => {
 
   return (
     <DefaultLayout title="Home">
-      <section className="w-full overflow-hidden">
+      <section className="w-full overflow-hidden lightBlueGradient">
         <div className="flex items-center w-full">
           <div className="container flex flex-col items-center justify-around mx-auto mt-40 mb-16">
-            <h1 className="">Hi, I’m Georgi Kurian.</h1>
-            <p className="text-2xl text-center text-gray-800 uppercase">I am a full-stack web developer</p>
+            <h1 className="mb-0 text-white">Hi, I’m Georgi Kurian</h1>
+            <p className="mt-4 text-2xl text-center text-white uppercase">I am a full-stack web developer</p>
           </div>
         </div>
         <div id="contact" className="flex flex-wrap justify-center w-full py-16 md:flex-row">
@@ -51,9 +51,9 @@ const HomePage = ({ skillData, projectDataList, workExperienceDataList }) => {
         </div>
       </section>
 
-      <section className="section lightBlueGradient">
+      <section className="section">
         <div id="skills-section" className="flex flex-col inner-wrap">
-          <h2 className="text-center text-white">Experience</h2>
+          <h2 className="text-center">Experience</h2>
           <div className="w-auto mx-auto">
             {workExperienceDataList.map((workExperienceData) => (
               <WorkExperience
@@ -111,6 +111,7 @@ const HomePage = ({ skillData, projectDataList, workExperienceDataList }) => {
 };
 
 HomePage.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
   skillData: PropTypes.object.isRequired,
   projectDataList: PropTypes.arrayOf(PropTypes.object).isRequired,
   workExperienceDataList: PropTypes.arrayOf(PropTypes.object).isRequired,

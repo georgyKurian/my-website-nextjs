@@ -38,12 +38,14 @@ const Header = ({ pageWrapperElement }) => {
   });
   return (
     <header>
-      <div className={`fixed top-menu-bar ${!scrollY.isGoingUp ? 'hide' : ''} z-20 w-full h-16 bg-white border-b border-grey-500`}>
-        <div className="flex items-center justify-center h-full inner-wrap">
+      <div className={`fixed top-menu-bar ${!scrollY.isGoingUp ? 'hide' : ''} z-20 w-full h-16 lightBlueGradient`}>
+        <div className="flex items-center justify-between h-full inner-wrap">
+          <img src="/Logo-2.svg" alt="Logo" className="h-10" />
+          <div />
           <Menu />
         </div>
       </div>
-      <div className="h-16" />
+      <div className="h-16 lightBlueGradient" />
     </header>
   );
 };

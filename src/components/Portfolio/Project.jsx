@@ -21,14 +21,14 @@ const Project = ({
     </div>
     <div className="flex flex-col justify-between flex-1 w-full px-3 py-3 border-r-2 border-gray-100">
       <div className="">
-        <h3 className="mb-2 text-xl font-bold text-center">{title}</h3>
+        <h4 className="text-center">{title}</h4>
         <p className="text-base text-gray-700">{description}</p>
       </div>
       <div>
         <div className="flex flex-wrap">
           {Array.isArray(tags)
             && tags.map(
-              (tag) => <span key={tag} className="inline-block px-3 py-px m-1 text-xs font-semibold text-gray-700 bg-gray-300 rounded-full">{tag}</span>,
+              (tag) => <span key={tag} className="inline-block px-2 py-px m-1 text-xs font-semibold text-gray-700 bg-gray-300 ">{tag}</span>,
             )}
         </div>
       </div>
