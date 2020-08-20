@@ -52,7 +52,7 @@ const HomePage = ({ skillData, projectDataList, workExperienceDataList }) => {
       </section>
 
       <section className="section">
-        <div id="skills-section" className="flex flex-col inner-wrap">
+        <div id="experience-section" className="flex flex-col inner-wrap">
           <h2 className="text-center">Experience</h2>
           <div className="w-auto mx-auto">
             {workExperienceDataList.map((workExperienceData) => (
