@@ -1,9 +1,12 @@
 module.exports = {
   theme: {
     purge: {
+      enabled: true,
       content: [
-        './src/components/**/*',
-        './src/pages/**/*',
+        './src/components/**/*.jsx',
+        './src/components/**/*.js',
+        './src/pages/**/*.jsx',
+        './src/pages/**/*.js',
       ],
       options: {
         whitelist: ['bg-red-500', 'px-4'],
