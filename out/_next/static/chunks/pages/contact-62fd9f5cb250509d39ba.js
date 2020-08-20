@@ -1,0 +1,1 @@
+_N_E=(window.webpackJsonp_N_E=window.webpackJsonp_N_E||[]).push([[11],{FEbK:function(n,t,e){(window.__NEXT_P=window.__NEXT_P||[]).push(["/contact",function(){return e("w2EZ")}])},w2EZ:function(n,t,e){"use strict";e.r(t);var o=e("q1tI"),w=e.n(o),_=e("QNI5"),c=w.a.createElement;t.default=function(){return c(_.a,{title:"Home"},c("h1",null,"Contact Page"))}}},[["FEbK",0,2,1,3]]]);
