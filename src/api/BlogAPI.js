@@ -1,6 +1,7 @@
 import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
+import moment from 'moment';
 
 const postsDirectory = join(process.cwd(), '_posts');
 
@@ -23,6 +24,11 @@ export function getPostBySlug(slug, fields = []) {
     }
     if (field === 'content') {
       items[field] = content;
+    }
+
+    if (field === 'date') {
+      const date = moment(data[field]);
+      items.formattedDate = date.format('D MMM yyyy');
     }
 
     if (data[field]) {

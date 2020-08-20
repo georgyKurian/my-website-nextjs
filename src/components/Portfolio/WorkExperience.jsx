@@ -4,11 +4,11 @@ import BriefCaseSVG from '../../assets/images/icons/briefcase.svg';
 const WorkExperience = ({
   companyName, position, timeline, companyUrl,
 }) => (
-  <div className="flex my-2 overflow-hidden bg-blue-800 rounded rounded-l-full">
+  <div className="flex my-2 overflow-hidden bg-blue-800" style={{ 'border-radius': '10rem 1.5rem 1.5rem 10rem' }}>
     <div className="flex flex-col items-center">
       <div className="my-auto border-4 border-transparent rounded-full">
-        <div className="w-10 h-10 p-2 bg-white rounded-full">
-          <BriefCaseSVG className="w-full h-full text-blue-800 fill-current" aria-hidden="true" />
+        <div className="h-20 p-5 bg-white rounded-full">
+          <BriefCaseSVG className="h-full text-blue-800 fill-current" aria-hidden="true" />
         </div>
       </div>
     </div>

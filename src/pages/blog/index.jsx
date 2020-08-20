@@ -5,21 +5,27 @@ import { getAllPosts } from '../../api/BlogAPI';
 export default function BlogIndexPage({ allPosts }) {
   return (
     <DefaultLayout title="Blog">
-      <div className="inner-wrap">
-        <h1>Blog</h1>
-        {allPosts.map((post) => (
-          <div key={post.slug} className="mb-8 bg-gray-200 rounded">
-            <div>
-              <Link as={`/blog/${post.slug}`} href="/blog/[slug]">
-                <a>
-                  {post.title}
-                  <p>{post.excerpt}</p>
-                  <span>{post.date}</span>
-                </a>
-              </Link>
+      <div className="py-4 lg:py-16 inner-wrap">
+        <div className="mx-auto lg:w-2/3">
+          <h1 className="text-center lg:pb-8">Blog</h1>
+          {allPosts.map((post) => (
+            <div key={post.slug} className="mb-8 rounded">
+              <div>
+                <Link as={`/blog/${post.slug}`} href="/blog/[slug]">
+                  <a>
+                    <div className="p-4 bg-gray-100 border rounded-lg">
+                      <div className="flex justify-between">
+                        <h4 className="mb-2 font-semibold text-gray-800">{post.title}</h4>
+                        <span className="text-gray-500">{post.formattedDate}</span>
+                      </div>
+                      <p className="mt-0 mb-2 text-sm text-gray-800">{post.excerpt}</p>
+                    </div>
+                  </a>
+                </Link>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </DefaultLayout>
   );

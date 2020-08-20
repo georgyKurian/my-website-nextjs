@@ -44,7 +44,7 @@ const Project = ({
             title="Open Github"
             className="block p-2 m-2"
           >
-            <GitHubIcon className="w-8 text-gray-500 fill-current stroke-current hover:text-primaryColor h-9" />
+            <GitHubIcon className="w-8 text-gray-500 fill-current stroke-current hover:text-blue-600 h-9" />
           </a>
           )}
       </div>
@@ -59,7 +59,7 @@ const Project = ({
           title="View project"
           className="inline-block p-2 m-2"
         >
-          <LinkSVGIcon className="w-8 text-gray-500 stroke-current hover:text-primaryColor h-9" fill="none" />
+          <LinkSVGIcon className="w-8 text-gray-500 stroke-current hover:text-blue-600 h-9" fill="none" />
         </a>
         )}
       </div>

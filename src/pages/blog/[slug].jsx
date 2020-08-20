@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
+import moment from 'moment';
 import DefaultLayout from '../../components/Layout/DefaultLayout';
 import { getPostBySlug, getAllPosts } from '../../api/BlogAPI';
 import markdownToHtml from '../../lib/markdownToHtml';
@@ -12,8 +13,7 @@ export default function Post({ post, morePosts, preview }) {
   return (
     <DefaultLayout title={post.title}>
       <div className="inner-wrap">
-
-        <article className="mx-auto markdown-section md:w-9/12 lg:w-8/12 xl:w-6/12">
+        <article className="py-4 mx-auto lg:py-16 markdown-section md:w-9/12 lg:w-8/12 xl:w-6/12">
           <h1>{post.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: post.content }} />
         </article>
