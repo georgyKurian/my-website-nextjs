@@ -40,7 +40,7 @@ const Header = ({ pageWrapperElement }) => {
     <header>
       <div className={`fixed top-menu-bar ${!scrollY.isGoingUp ? 'hide' : ''} z-20 w-full h-16 lightBlueGradient`}>
         <div className="flex items-center justify-between h-full inner-wrap">
-          <img src="/Logo-2.svg" alt="Logo" className="h-10" />
+          <img src="/logo-2.svg" alt="Logo" className="h-10" />
           <div />
           <Menu />
         </div>
