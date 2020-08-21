@@ -51,8 +51,8 @@ h6 {
 }
 
 h1 {
-  @apply font-normal;
-  @apply text-5xl;
+  @apply font-normal text-center;
+  font-size: 2.6rem;
 }
 
 h2 {
@@ -127,4 +127,16 @@ pre {
 ::selection {
   @apply bg-blue-500;
   @apply text-white;
+}
+
+@screen sm {
+}
+@screen md {
+}
+@screen lg {
+}
+@screen xl {
+  h1 {
+    font-size: 3.5rem;
+  }
 }
