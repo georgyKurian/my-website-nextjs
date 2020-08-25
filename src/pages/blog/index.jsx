@@ -1,10 +1,14 @@
 import Link from 'next/link';
+import Head from 'next/head';
 import DefaultLayout from '../../components/Layout/DefaultLayout';
 import { getAllPosts } from '../../api/BlogAPI';
 
 export default function BlogIndexPage({ allPosts }) {
   return (
     <DefaultLayout title="Blog">
+      <Head>
+        <meta name="description" content="Blog of Georgi Varghese Kurian" />
+      </Head>
       <div className="py-4 lg:py-16 inner-wrap">
         <div className="mx-auto lg:w-2/3">
           <h1 className="text-center lg:pb-8">Blog</h1>
