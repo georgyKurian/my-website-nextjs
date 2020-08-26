@@ -11,6 +11,18 @@ const DefaultLayout = ({
   return (
     <>
       <Head>
+        { /* Global site tag (gtag.js) - Google Analytics */ }
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80050463-3"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'UA-80050463-3');
+              `,
+          }}
+        />
         <title>{`E | ${title}`}</title>
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin />
 
