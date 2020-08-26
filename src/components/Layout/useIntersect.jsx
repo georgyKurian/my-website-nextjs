@@ -1,33 +1,35 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from 'react';
 
-export const useIntersect = ({rootMargin="0px", threshold = 0.1}) => {
-  const [entry,updateEntrty] = useState();
+const useIntersect = ({ rootMargin = '0px', threshold = 0.1 }) => {
+  const [entry, updateEntrty] = useState();
   const [node, setNode] = useState(null);
 
   const observer = useRef(null);
 
   useEffect(() => {
-    if(observer.current){
+    if (observer.current) {
       observer.current.disconnect();
     }
     observer.current = new window.IntersectionObserver(
-      ([entry]) => {
-        if(entry.intersectionRatio>0){
-          updateEntrty(entry);
+      ([firstEntry]) => {
+        if (entry.intersectionRatio > 0) {
+          updateEntrty(firstEntry);
           currentObserver.disconnect();
         }
       },
       {
         rootMargin,
-        threshold
-      }
+        threshold,
+      },
     );
-    const {current: currentObserver} = observer;
+    const { current: currentObserver } = observer;
 
-    if(node) currentObserver.observe(node);
+    if (node) currentObserver.observe(node);
 
     return () => currentObserver.disconnect();
-  }, [node,rootMargin,threshold]);
+  }, [node, rootMargin, threshold]);
 
   return [setNode, entry];
 };
+
+export default useIntersect;

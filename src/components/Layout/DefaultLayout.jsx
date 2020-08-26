@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
 import Head from 'next/head';
+import { useRef } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 
 const DefaultLayout = ({
   headerContent, children, title,
 }) => {
+  const wrapperElementRef = useRef(null);
   return (
     <>
       <Head>
@@ -14,13 +16,13 @@ const DefaultLayout = ({
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
       </Head>
-             
-        <div className="relative flex flex-col" style={{ minHeight: '100vh' }}>
-            <Header>{headerContent}</Header>
-            <main className={`w-full flex-1`} >{children}</main>
-            <Footer />
-        </div>        
-      
+
+      <div className="flex flex-col lg:static" style={{ minHeight: '100vh' }} ref={wrapperElementRef}>
+        <Header pageWrapperElement={wrapperElementRef}>{headerContent}</Header>
+        <main className="flex-1 w-full">{children}</main>
+        <Footer />
+      </div>
+
     </>
   );
 };
@@ -28,10 +30,9 @@ const DefaultLayout = ({
 DefaultLayout.propTypes = {
   headerContent: PropTypes.element,
   children: PropTypes.oneOfType([
-      PropTypes.element,
-      PropTypes.arrayOf(PropTypes.element), 
-      PropTypes.string]
-  ),
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
+    PropTypes.string]),
   title: PropTypes.string,
 };
 

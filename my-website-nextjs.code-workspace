@@ -7,6 +7,7 @@
 	"settings": {
 		"eslint.format.enable": true,
 		"editor.formatOnSave": true,
-		"eslint.alwaysShowStatus": true
+		"eslint.alwaysShowStatus": true,
+		"svg.preview.background": "transparent"
 	}
 }

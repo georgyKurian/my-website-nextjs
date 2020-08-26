@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useRef, useEffect } from 'react';
+import Head from 'next/head';
 import DefaultLayout from '../components/Layout/DefaultLayout';
 import GitHubLogo from '../assets/images/icons/github.svg';
 import EmailLogo from '../assets/images/icons/email.svg';
@@ -9,7 +10,7 @@ import { getSkillsData, getProjectsData, getWorkExperienceData } from '../api/Da
 import SkillGroup from '../components/Portfolio/SkillGroup';
 import Project from '../components/Portfolio/Project';
 import WorkExperience from '../components/Portfolio/WorkExperience';
-import { useIntersect } from '../components/Layout/useIntersect';
+import useIntersect from '../components/Layout/useIntersect';
 
 const HomePage = ({ skillData, projectDataList, workExperienceDataList }) => {
   const cssClasses = 'w-1/5 md:w-16 p-2 hover:p-1 focus:p-1 opacity-75 hover:opacity-100 focus:opacity-100 m-1';
@@ -24,6 +25,9 @@ const HomePage = ({ skillData, projectDataList, workExperienceDataList }) => {
 
   return (
     <DefaultLayout title="Home">
+      <Head>
+        <meta name="description" content="Portfolio of Georgi Varghese Kurian" />
+      </Head>
       <section className="w-full overflow-hidden lightBlueGradient">
         <div className="flex items-center w-full">
           <div className="container flex flex-col items-center justify-around mx-auto mt-40 mb-16">
@@ -92,7 +96,7 @@ const HomePage = ({ skillData, projectDataList, workExperienceDataList }) => {
       <section className="section">
         <div id="skills-section" className="flex flex-col inner-wrap">
           <h2 className="text-center">Skills</h2>
-          <div className={`w-2/3 mx-auto sm:w-full lg:lg:w-2/3 ${entry ? 'loaded' : ''}`} ref={skillsSectionRef}>
+          <div className={`w-10/12 mx-auto sm:w-full lg:lg:w-2/3 ${entry ? 'loaded' : ''}`} ref={skillsSectionRef}>
             <div className="lg:mx-auto lg:w-2/3 grid sm:grid-cols-2 md:grid-cols-3 gap-4">
               {Object.keys(skillData).map((skillGroupName) => (
                 <SkillGroup
