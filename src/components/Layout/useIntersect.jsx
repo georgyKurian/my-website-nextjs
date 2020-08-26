@@ -12,7 +12,7 @@ const useIntersect = ({ rootMargin = '0px', threshold = 0.1 }) => {
     }
     observer.current = new window.IntersectionObserver(
       ([firstEntry]) => {
-        if (entry.intersectionRatio > 0) {
+        if (firstEntry.intersectionRatio > 0) {
           updateEntrty(firstEntry);
           currentObserver.disconnect();
         }
