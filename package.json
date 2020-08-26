@@ -7,8 +7,8 @@
   ],
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "build": "env NODE_ENV=production next build",
+    "start": "env NODE_ENV=production next start"
   },
   "dependencies": {
     "gray-matter": "^4.0.2",

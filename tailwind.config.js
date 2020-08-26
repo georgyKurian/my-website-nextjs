@@ -1,18 +1,18 @@
 module.exports = {
-  theme: {
-    purge: {
-      enabled: true,
-      content: [
-        './src/components/**/*.jsx',
-        './src/components/**/*.js',
-        './src/pages/**/*.jsx',
-        './src/pages/**/*.js',
-      ],
-      options: {
-        whitelist: ['bg-red-500', 'px-4'],
-        whitelistPatternsChildren: [/carousel/, /html/],
-      },
+  purge: {
+    enabled: true,
+    content: [
+      './src/components/**/*.jsx',
+      './src/components/**/*.js',
+      './src/pages/**/*.jsx',
+      './src/pages/**/*.js',
+    ],
+    options: {
+      whitelist: ['bg-red-500', 'px-4'],
+      whitelistPatternsChildren: [/carousel/, /html/],
     },
+  },
+  theme: {
     screens: {
       sm: '640px',
       md: '960px',
