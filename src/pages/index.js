@@ -27,7 +27,10 @@ const HomePage = ({ skillData, projectDataList, workExperienceDataList }) => {
       <section className="w-full overflow-hidden lightBlueGradient">
         <div className="flex items-center w-full">
           <div className="container flex flex-col items-center justify-around mx-auto mt-40 mb-16">
-            <h1 className="mb-0 text-white">Hi, I’m Georgi Kurian</h1>
+            <h1 className="mb-0 text-white">
+              Hi, I’m Georgi Kurian
+              <span className="sr-only"> and this is my website</span>
+            </h1>
             <p className="mt-4 text-2xl text-center text-white uppercase">I am a full-stack web developer</p>
           </div>
         </div>
