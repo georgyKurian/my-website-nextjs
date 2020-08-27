@@ -23,7 +23,7 @@ const DefaultLayout = ({
               `,
           }}
         />
-        <title>{`E | ${title}`}</title>
+        <title>{`${title} | Georgi Kurian's Website`}</title>
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin />
 
         <meta charSet="utf-8" />

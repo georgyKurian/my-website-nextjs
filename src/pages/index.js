@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import { useRef, useEffect } from 'react';
-import Head from 'next/head';
 import DefaultLayout from '../components/Layout/DefaultLayout';
 import GitHubLogo from '../assets/images/icons/github.svg';
 import EmailLogo from '../assets/images/icons/email.svg';
@@ -24,10 +23,7 @@ const HomePage = ({ skillData, projectDataList, workExperienceDataList }) => {
   }, [skillsSectionRef]);
 
   return (
-    <DefaultLayout title="Home">
-      <Head>
-        <meta name="description" content="Portfolio of Georgi Varghese Kurian" />
-      </Head>
+    <DefaultLayout title="Home" description="Georgi Varghese Kurian Skills, Portfolio Projects and contact">
       <section className="w-full overflow-hidden lightBlueGradient">
         <div className="flex items-center w-full">
           <div className="container flex flex-col items-center justify-around mx-auto mt-40 mb-16">
