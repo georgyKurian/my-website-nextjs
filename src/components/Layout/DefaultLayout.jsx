@@ -24,7 +24,8 @@ const DefaultLayout = ({
           }}
         />
         <title>{`${title} | Georgi Kurian's Website`}</title>
-        <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin />
+
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="true" />
 
         <meta charSet="utf-8" />
         <meta name="application-name" content="Georgi's App" />
@@ -39,8 +40,8 @@ const DefaultLayout = ({
         <meta name="theme-color" content="#000000" />
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover" />
 
-        <link rel="apple-touch-icon" sizes="180x180" href="/logo-2.svg" />
-        <link rel="icon" size="32x32" type="image/svg+xml" href="/logo-2.svg" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.svg" />
+        <link rel="icon" size="32x32" type="image/png" href="/favicon-32x32.png" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
