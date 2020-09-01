@@ -14,7 +14,6 @@ export function getPostBySlug(slug, fields = []) {
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
-
   const items = {};
 
   // Ensure only the minimal needed data is exposed

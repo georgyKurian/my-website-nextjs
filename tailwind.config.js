@@ -1,6 +1,5 @@
 module.exports = {
   purge: {
-    enabled: true,
     content: [
       './src/components/**/*.jsx',
       './src/components/**/*.js',
@@ -34,8 +33,8 @@ module.exports = {
           default: 'EDEFF0',
           100: '#f5f5f5',
           200: '#f2f2f2',
-          300: '#c0c0c0',
-          400: '#e3e3e3',
+          300: '#e3e3e3',
+          400: '#a3a3a3',
           500: '#808080',
           600: '#555555',
           700: '#444444',

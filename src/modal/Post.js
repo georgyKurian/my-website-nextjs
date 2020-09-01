@@ -2,7 +2,7 @@ import moment from 'moment';
 
 class Post {
   constructor({
-    title, excerpt, coverImage, date, ogImage, content, categories,
+    title, excerpt, coverImage, date, ogImage, content, tags,
   }) {
     this.title = title;
     this.excerpt = excerpt;
@@ -10,7 +10,7 @@ class Post {
     this.date = moment(date);
     this.ogImage = ogImage;
     this.content = content;
-    this.categories = categories;
+    this.tags = tags;
   }
 
   getFormattedDate(format = 'MMMM Do YYYY') {
