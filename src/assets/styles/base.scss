@@ -39,7 +39,13 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
   @apply leading-tight;
   @apply mb-4;
   @apply mt-8;
@@ -50,32 +56,38 @@ h6 {
   }
 }
 
-h1 {
+h1,
+.h1 {
   @apply font-normal text-center;
   font-size: 2.6rem;
 }
 
-h2 {
+h2,
+.h2 {
   @apply font-normal;
   @apply text-4xl;
 }
 
-h3 {
+h3,
+.h3 {
   @apply font-normal;
   @apply text-3xl;
 }
 
-h4 {
+h4,
+.h4 {
   @apply font-normal;
   @apply text-2xl;
 }
 
-h5 {
+h5,
+.h5 {
   @apply font-normal;
   @apply text-xl;
 }
 
-h6 {
+h6,
+.h6 {
   @apply font-light;
   @apply text-lg;
 }

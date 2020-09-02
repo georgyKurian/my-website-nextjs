@@ -14,18 +14,20 @@ export default function BlogIndexPage({ allPosts }) {
           <h1 className="text-center lg:pb-8">Blog</h1>
           {allPosts.map((post) => (
             <div key={post.slug} className="mb-8 rounded">
-              <div>
-                <Link as={`/blog/${post.slug}`} href="/blog/[slug]">
-                  <a>
-                    <div className="p-4 bg-gray-100 border rounded-lg">
-                      <div className="flex justify-between">
-                        <h4 className="mb-2 font-semibold text-gray-800">{post.title}</h4>
-                        <span className="text-gray-500">{post.formattedDate}</span>
-                      </div>
-                      <p className="mt-0 mb-2 text-sm text-gray-800">{post.excerpt}</p>
-                    </div>
-                  </a>
-                </Link>
+              <div className="flex">
+                <div className="relative w-2/12">
+                  <div className="w-full bg-gray-500 rounded" style={{ paddingTop: '100%' }} />
+                </div>
+                <div className="flex-1 ml-4">
+                  <Link as={`/blog/${post.slug}`} href="/blog/[slug]">
+                    <a>
+                      <h2 className="mb-2 font-semibold text-gray-800 h4 focus:underline hover:underline">{post.title}</h2>
+                    </a>
+                  </Link>
+                  <p className="mt-0 mb-2 text-sm text-gray-600">{post.description}</p>
+                  <span className="text-themeGray-600"><time dateTime={post.date}>{post.formattedDate}</time></span>
+                </div>
+
               </div>
             </div>
           ))}
@@ -42,7 +44,7 @@ export async function getStaticProps() {
     'slug',
     'author',
     'coverImage',
-    'excerpt',
+    'description',
   ]);
 
   return {
