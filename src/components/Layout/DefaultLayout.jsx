@@ -53,7 +53,7 @@ const DefaultLayout = ({
         <meta property="og:site_name" content="Georgi's App"></meta>
       </Head>
 
-      <div className="flex flex-col lg:static" style={{ minHeight: '100vh' }} ref={wrapperElementRef}>
+      <div className="flex flex-col w-full lg:static" style={{ minHeight: '100vh' }} ref={wrapperElementRef}>
         <Header pageWrapperElement={wrapperElementRef}>{headerContent}</Header>
         <main className="flex-1 w-full">{children}</main>
         <Footer />
