@@ -28,18 +28,18 @@ const DefaultLayout = ({
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin="true" />
 
         <meta charSet="utf-8"></meta>
-        <meta name="application-name" content="Georgi's App" ></meta>
-        <meta name="apple-mobile-web-app-capable" content="yes" ></meta>
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" ></meta>
-        <meta name="apple-mobile-web-app-title" content="Georgi's App" ></meta>
-        <meta name="description" content={description} ></meta>
-        <meta name="author" content="Georgi Kurian"></meta>
-        <meta name="mobile-web-app-capable" content="yes" ></meta>
-        <meta name="msapplication-config" content="/static/icons/browserconfig.xml" ></meta>
-        <meta name="msapplication-TileColor" content="#2B5797" ></meta>
-        <meta name="msapplication-tap-highlight" content="no" ></meta>
-        <meta name="theme-color" content="#000000" ></meta>
-        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover" ></meta>
+        <meta name="application-name" content="Georgi's App" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Georgi's App" />
+        <meta name="description" content={description} />
+        <meta name="author" content="Georgi Kurian"/>
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="msapplication-config" content="/static/icons/browserconfig.xml" />
+        <meta name="msapplication-TileColor" content="#2B5797" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover" />
 
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.svg" />
         <link rel="icon" size="32x32" type="image/png" href="/favicon-32x32.png" />
@@ -47,13 +47,13 @@ const DefaultLayout = ({
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
 
-        <meta property="og:type" content="website" ></meta>
-        <meta property="og:title" content={title} ></meta>
-        <meta property="og:description" content={description} ></meta>
-        <meta property="og:site_name" content="Georgi's App"></meta>
+        <meta key="type" property="og:type" content="website" ></meta>
+        <meta key="title" property="og:title" content={title} ></meta>
+        <meta key="description" property="og:description" content={description} ></meta>
+        <meta key="site_name" property="og:site_name" content="Georgi's App"></meta>
       </Head>
 
-      <div className="flex flex-col w-full lg:static" style={{ minHeight: '100vh' }} ref={wrapperElementRef}>
+      <div className="flex flex-col lg:static" style={{ minHeight: '100vh' }} ref={wrapperElementRef}>
         <Header pageWrapperElement={wrapperElementRef}>{headerContent}</Header>
         <main className="flex-1 w-full">{children}</main>
         <Footer />

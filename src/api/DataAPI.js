@@ -14,3 +14,8 @@ export function getWorkExperienceData() {
   const workExperienceData = getJSONDataFromFile('my_work_experience.json');
   return workExperienceData;
 }
+
+export function getAwardData() {
+  const workExperienceData = getJSONDataFromFile('my_awards.json');
+  return workExperienceData;
+}

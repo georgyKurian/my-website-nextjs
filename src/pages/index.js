@@ -1,13 +1,18 @@
 import PropTypes from 'prop-types';
 import { useRef, useEffect } from 'react';
 import DefaultLayout from '../components/Layout/DefaultLayout';
-import { getSkillsData, getProjectsData, getWorkExperienceData } from '../api/DataAPI';
+import {
+  getSkillsData, getProjectsData, getWorkExperienceData, getAwardData,
+} from '../api/DataAPI';
 import SkillGroup from '../components/Portfolio/SkillGroup';
 import Project from '../components/Portfolio/Project';
 import WorkExperience from '../components/Portfolio/WorkExperience';
 import useIntersect from '../components/Layout/useIntersect';
+import Award from '../components/Portfolio/Awards';
 
-const HomePage = ({ skillData, projectDataList, workExperienceDataList }) => {
+const HomePage = ({
+  skillData, projectDataList, workExperienceDataList, awardDataList,
+}) => {
   const skillsSectionRef = useRef(null);
   const [setNode, entry] = useIntersect({ rootMargin: '-20%' });
 
@@ -86,6 +91,26 @@ const HomePage = ({ skillData, projectDataList, workExperienceDataList }) => {
         </div>
       </section>
 
+      <section className="section">
+        <div id="award-section" className="flex flex-col inner-wrap">
+          <h2 className="text-center">Awards</h2>
+          <div className="w-10/12 mx-auto sm:w-full lg:lg:w-2/3">
+            <div className="lg:mx-auto lg:w-2/3 grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+              {awardDataList && awardDataList.map((awardData) => (
+                <Award
+                  key={awardData.title}
+                  title={awardData.title}
+                  description={awardData.description}
+                  awardedBy={awardData.awardedBy}
+                  date={awardData.date}
+                  image={awardData.image}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
     </DefaultLayout>
   );
 };
@@ -95,6 +120,7 @@ HomePage.propTypes = {
   skillData: PropTypes.object.isRequired,
   projectDataList: PropTypes.arrayOf(PropTypes.object).isRequired,
   workExperienceDataList: PropTypes.arrayOf(PropTypes.object).isRequired,
+  awardDataList: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default HomePage;
@@ -103,12 +129,13 @@ export async function getStaticProps() {
   const skillData = getSkillsData();
   const projectDataList = getProjectsData();
   const workExperienceDataList = getWorkExperienceData();
-
+  const awardDataList = getAwardData();
   return {
     props: {
       skillData,
       projectDataList,
       workExperienceDataList,
+      awardDataList,
     },
   };
 }
