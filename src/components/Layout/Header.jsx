@@ -20,25 +20,39 @@ const Header = ({ pageWrapperElement }) => {
     }
   }
 
-  function handleMenuButtonClick() {
+  function closeMenu() {
     if (isMenuOpen) {
-      // setMenuClosing(true);
       setMenuOpen(false);
-      /* setTimeout(() => {
-        setMenuOpen(false);
-        setMenuClosing(false);
-      }, 1000); */
       pageWrapperElement.current.classList.remove('fixed');
-    } else {
-      setMenuOpen(true);
-      pageWrapperElement.current.classList.add('fixed');
     }
+  }
+
+  function openMenu() {
+    setMenuOpen(true);
+    pageWrapperElement.current.classList.add('fixed');
+  }
+
+  function handleMenuButtonClick(e) {
+    if (isMenuOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+    e.stopPropagation();
   }
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   });
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      window.addEventListener('click', closeMenu);
+      return () => window.removeEventListener('click', closeMenu);
+    }
+    return undefined;
+  }, [isMenuOpen]);
 
   return (
     <header>
