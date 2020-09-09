@@ -5,7 +5,7 @@ import Header from './Header';
 import Footer from './Footer';
 
 const DefaultLayout = ({
-  headerContent, children, title, description,
+  headerContent, children, title, description, mainStyle
 }) => {
   const wrapperElementRef = useRef(null);
   return (
@@ -26,6 +26,8 @@ const DefaultLayout = ({
         <title>{`${title} | Georgi Kurian's Website`}</title>
 
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin="true" />
+        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"></link>
+
 
         <meta charSet="utf-8"></meta>
         <meta name="application-name" content="Georgi's App" />
@@ -55,7 +57,7 @@ const DefaultLayout = ({
 
       <div className="flex flex-col lg:static" style={{ minHeight: '100vh' }} ref={wrapperElementRef}>
         <Header pageWrapperElement={wrapperElementRef}>{headerContent}</Header>
-        <main className="flex-1 w-full">{children}</main>
+        <main className={`flex-1 w-full ${mainStyle||''}`} >{children}</main>
         <Footer />
       </div>
 
@@ -70,9 +72,11 @@ DefaultLayout.propTypes = {
     PropTypes.arrayOf(PropTypes.element),
     PropTypes.string]),
   title: PropTypes.string,
+  mainStyle: PropTypes.string,
 };
 
 DefaultLayout.defaultProps = {
+  mainStyle: '',
   headerContent: null,
   children: '',
   title: '',

@@ -12,9 +12,15 @@ const Post = ({ post, morePosts, preview }) => {
   }
 
   return (
-    <DefaultLayout title={post.title}>
-      <div className="inner-wrap">
-        <article className="flex flex-col py-4 mx-auto lg:py-16 md:w-9/12 lg:w-8/12 xl:w-6/12">
+    <DefaultLayout title={post.title} mainStyle="bg-gray-100">
+
+      <div id="post-content" className="inner-wrap">
+        <article className="flex flex-col mx-auto my-4 bg-white lg:mb-8 lg:mt-6 shadow-xs lg:pb-16 md:w-9/12 lg:w-8/12 xl:px-10 xl:w-7/12">
+          <span className="xl:pt-10 text-themeGray-500">
+            <span className="sr-only">Posted Date :</span>
+            <time dateTime={post.date}>{post.formattedDate}</time>
+          </span>
+          <hr className="my-4 border-themeGray-300" />
           <div className="flex-1 mr-10">
             <h1>{post.title}</h1>
             {post.cover_image && <img src={post.cover_image} aria-hidden="true" alt="" />}
@@ -22,10 +28,6 @@ const Post = ({ post, morePosts, preview }) => {
           </div>
           <footer className="flex flex-col">
             <span>Written by : Georgi Kurian</span>
-            <span className="text-themeGray-600">
-              Posted Date :
-              <time dateTime={post.date}>{post.formattedDate}</time>
-            </span>
             {post.tags
             && (
             <div className="flex flex-col mt-8">

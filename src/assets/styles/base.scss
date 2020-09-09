@@ -1,5 +1,5 @@
 html {
-  @apply font-sans;
+  @apply font-roboto;
 
   font-size: 16px;
   scroll-behavior: smooth;
@@ -64,14 +64,13 @@ h1,
 
 h2,
 .h2 {
-  @apply font-normal;
-  @apply text-4xl;
+  @apply font-normal text-4xl;
 }
 
 h3,
 .h3 {
   @apply font-normal;
-  @apply text-3xl;
+  @apply text-2xl;
 }
 
 h4,
