@@ -56,18 +56,18 @@ const Header = ({ pageWrapperElement }) => {
 
   return (
     <header>
-      <div className={`fixed top-menu-bar ${!scrollY.isGoingUp ? 'hide' : ''} ${scrollY.isGoingUp && scrollY.offset > 20 ? 'shadow-lg' : ''} z-20 w-full h-16 lightBlueGradient`}>
+      <div className={`fixed top-menu-bar ${!scrollY.isGoingUp ? 'hide' : ''} ${scrollY.isGoingUp && scrollY.offset > 20 ? 'shadow-lg' : ''} z-20 w-full h-16 bg-white`}>
         <div className="flex items-center justify-between h-full inner-wrap">
           <img src="/logo-2.svg" alt="Logo" className="h-10" />
           <div />
           <Menu />
           <button type="button" className="px-2 py-1 lg:hidden" onClick={handleMenuButtonClick} aria-expanded={isMenuOpen} aria-label="Open the menu">
-            {!isMenuOpen && <HambergerIcon className="h-8 text-white fill-current" aria-hidden="true" />}
-            {isMenuOpen && <CloseIcon className="h-8 text-white fill-current" aria-hidden="true" />}
+            {!isMenuOpen && <HambergerIcon className="h-8 text-gray-700 fill-current" aria-hidden="true" />}
+            {isMenuOpen && <CloseIcon className="h-8 text-gray-700 fill-current" aria-hidden="true" />}
           </button>
         </div>
       </div>
-      <div className="h-16 lightBlueGradient" />
+      <div className="h-16" />
       {isMenuOpen
       && (
         <div className="absolute right-0 w-full h-full lg:hidden">

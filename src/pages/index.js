@@ -24,14 +24,17 @@ const HomePage = ({
 
   return (
     <DefaultLayout title="Home" description="Georgi Varghese Kurian Skills, Portfolio Projects and contact">
-      <section className="flex items-center w-full overflow-hidden lightBlueGradient" style={{ minHeight: '80vh' }}>
-        <div className="flex items-center w-full">
-          <div className="container flex flex-col items-center justify-around mx-auto -mt-16">
-            <h1 className="mb-0 text-white">
+      <section className="flex items-center w-full overflow-hidden" style={{ minHeight: '80vh' }}>
+        <div className="container flex flex-col items-center md:flex-row">
+          <div className="flex flex-col items-center justify-around md:items-start md:w-1/2">
+            <h1 className="mb-0">
               Hi, I’m Georgi Kurian
               <span className="sr-only"> and this is my website</span>
             </h1>
-            <p className="mt-4 text-2xl text-center text-white uppercase">I am a full-stack web developer</p>
+            <p className="mt-4 text-2xl text-center uppercase">I am a full-stack web developer</p>
+          </div>
+          <div className="w-full md:w-1/2">
+            <img src="/Programming-amico.svg" alt="" role="presentation" className="w-full mx-auto sm:w-2/3 md:w-8/12" />
           </div>
         </div>
       </section>

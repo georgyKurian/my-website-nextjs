@@ -21,7 +21,7 @@ export default function BlogIndexPage({ allPosts }) {
                 <div className="flex-1 ml-4">
                   <Link as={`/blog/${post.slug}`} href="/blog/[slug]">
                     <a>
-                      <h2 className="mb-2 font-semibold text-gray-800 h4 focus:underline hover:underline">{post.title}</h2>
+                      <h2 className="mb-2 font-medium text-gray-800 h4 focus:underline hover:underline">{post.title}</h2>
                     </a>
                   </Link>
                   <p className="mt-0 mb-2 text-sm text-gray-600">{post.description}</p>

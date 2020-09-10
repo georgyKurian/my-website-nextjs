@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 const Menu = () => {
-  const linkClasses = 'ml-6 text-white font-semibold hover:text-gray-200';
+  const linkClasses = 'ml-6 text-gray-700 font-medium hover:text-blue-700';
   return (
     <nav className="items-center justify-center hidden text-lg lg:flex">
       <ul className="flex">
