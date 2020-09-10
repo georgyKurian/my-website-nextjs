@@ -61,7 +61,7 @@ const Header = ({ pageWrapperElement }) => {
           <img src="/logo-2.svg" alt="Logo" className="h-10" />
           <div />
           <Menu />
-          <button type="button" className="px-2 py-1 lg:hidden" onClick={handleMenuButtonClick} aria-expanded={isMenuOpen} aria-label="Open the menu">
+          <button type="button" className="px-2 py-1 md:hidden" onClick={handleMenuButtonClick} aria-expanded={isMenuOpen} aria-label="Open the menu">
             {!isMenuOpen && <HambergerIcon className="h-8 text-gray-700 fill-current" aria-hidden="true" />}
             {isMenuOpen && <CloseIcon className="h-8 text-gray-700 fill-current" aria-hidden="true" />}
           </button>

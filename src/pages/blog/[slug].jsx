@@ -15,13 +15,13 @@ const Post = ({ post, morePosts, preview }) => {
     <DefaultLayout title={post.title} mainStyle="bg-gray-100">
 
       <div id="post-content" className="inner-wrap">
-        <article className="flex flex-col mx-auto my-4 bg-white lg:mb-8 lg:mt-6 shadow-xs lg:pb-16 md:w-9/12 lg:w-8/12 xl:px-10 xl:w-7/12">
+        <article className="flex flex-col px-5 py-5 mx-auto my-4 bg-white lg:mb-8 lg:mt-6 shadow-xs lg:pb-16 md:w-9/12 lg:w-8/12 xl:px-10 xl:w-7/12">
           <span className="xl:pt-10 text-themeGray-500">
             <span className="sr-only">Posted Date :</span>
             <time dateTime={post.date}>{post.formattedDate}</time>
           </span>
           <hr className="my-4 border-themeGray-300" />
-          <div className="flex-1 mr-10">
+          <div className="flex-1">
             <h1>{post.title}</h1>
             {post.cover_image && <img src={post.cover_image} aria-hidden="true" alt="" />}
             <div className="flex-1 markdown-section" dangerouslySetInnerHTML={{ __html: post.content }} />
@@ -38,6 +38,7 @@ const Post = ({ post, morePosts, preview }) => {
           </footer>
         </article>
       </div>
+      {morePosts && <div>red</div>}
     </DefaultLayout>
   );
 };
@@ -46,6 +47,7 @@ Post.propTypes = {
   post: PropTypes.shape({
     title: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
+    formattedDate: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
     tags: PropTypes.arrayOf(PropTypes.string),
     author: PropTypes.string.isRequired,

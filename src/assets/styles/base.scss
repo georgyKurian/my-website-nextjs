@@ -10,7 +10,8 @@ a {
   @apply no-underline;
   @apply text-blue-600;
 
-  &:hover {
+  &:hover,
+  &:focus {
     @apply text-blue-800;
   }
 }
@@ -132,6 +133,14 @@ pre {
     @apply bg-transparent;
     @apply block;
     @apply p-0;
+  }
+}
+
+div,
+p,
+ul {
+  &:focus {
+    @apply outline-none;
   }
 }
 

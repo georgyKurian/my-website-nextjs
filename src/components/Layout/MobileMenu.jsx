@@ -9,12 +9,14 @@ const MobileMenu = () => {
   }, [mobileMenuRef.current]);
   return (
     <nav className="">
-      <ul ref={mobileMenuRef} className="flex flex-col items-center justify-center text-lg" tabIndex="-1">
-        <li className="w-full"><Link href="/"><a className={linkClasses}>Home</a></Link></li>
-        <li className="w-full"><Link href="/#projects-section"><a className={linkClasses}>Projects</a></Link></li>
-        <li className="w-full"><Link href="/#skills-section"><a className={linkClasses}>Skills</a></Link></li>
-        <li className="w-full"><Link href="/blog"><a className={linkClasses}>Blog</a></Link></li>
-        <li className="w-full"><Link href="/#contact"><a className={linkClasses}>Contact</a></Link></li>
+      <ul ref={mobileMenuRef} className="flex flex-col items-center justify-center text-lg mobile-menu" tabIndex="-1">
+        <li><Link href="/"><a>Home</a></Link></li>
+        <li><Link href="/#projects-section"><a>Projects</a></Link></li>
+        <li><Link href="/#skills-section"><a>Skills</a></Link></li>
+        {/* <li>
+          <Link href="/blog"><a className={linkClasses}>Blog</a></Link></li>
+        */}
+        <li><Link href="/#contact"><a>Contact</a></Link></li>
       </ul>
     </nav>
   );
