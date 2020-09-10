@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import FocusTrap from 'focus-trap-react';
 import HambergerIcon from '../../assets/images/icons/hamberger.svg';
 import CloseIcon from '../../assets/images/icons/close.svg';
 import MobileMenu from './MobileMenu';
@@ -73,7 +74,9 @@ const Header = ({ pageWrapperElement }) => {
         <div className="absolute right-0 w-full h-full lg:hidden">
           <div className="absolute w-full h-full bg-black bg-opacity-50" />
           <div className="absolute right-0 w-full h-full bg-white sm:w-2/3">
-            <MobileMenu />
+            <FocusTrap>
+              <MobileMenu />
+            </FocusTrap>
           </div>
         </div>
       )}
