@@ -27,11 +27,11 @@ const HomePage = ({
       <section className="flex items-center w-full overflow-hidden" style={{ minHeight: '80vh' }}>
         <div className="container flex flex-col items-center md:flex-row">
           <div className="flex flex-col items-center justify-around md:items-start md:w-1/2">
-            <h1 className="mb-0">
+            <h1 className="mb-0 text-gray-800">
               Hi, I’m Georgi Kurian
               <span className="sr-only"> and this is my website</span>
             </h1>
-            <p className="mt-4 text-2xl text-center uppercase">I am a full-stack web developer</p>
+            <p className="mt-0 ml-1 text-2xl text-center text-gray-600">I am a full-stack web developer</p>
           </div>
           <div className="w-full md:w-1/2">
             <img src="/Programming-amico.svg" alt="" role="presentation" className="w-full mx-auto sm:w-2/3 md:w-8/12" />
