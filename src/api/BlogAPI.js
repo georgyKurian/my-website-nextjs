@@ -27,7 +27,7 @@ export function getPostBySlug(slug, fields = []) {
 
     if (field === 'date') {
       const date = moment(data[field]);
-      items.formattedDate = date.format('D MMM yyyy');
+      items.formattedDate = date.format('MMM Do, YYYY');
     }
 
     if (data[field]) {

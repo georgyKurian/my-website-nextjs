@@ -28,6 +28,10 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        roboto: ['Roboto', 'sans-serif'],
+        arial: ['Arial', 'sans-serif'],
+      },
       colors: {
         themeGray: {
           default: 'EDEFF0',

@@ -13,7 +13,7 @@ class Post {
     this.tags = tags;
   }
 
-  getFormattedDate(format = 'MMMM Do YYYY') {
+  getFormattedDate(format = 'MMMM Do, YYYY') {
     return this.date.format(format);
   }
 }

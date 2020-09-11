@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import HambergerIcon from '../../assets/images/icons/hamberger.svg';
 import CloseIcon from '../../assets/images/icons/close.svg';
 import MobileMenu from './MobileMenu';
+import Escape from '../Escape';
 
 const { default: Menu } = require('./Menu');
 
@@ -20,19 +21,25 @@ const Header = ({ pageWrapperElement }) => {
     }
   }
 
-  function handleMenuButtonClick() {
+  function closeMenu() {
     if (isMenuOpen) {
-      // setMenuClosing(true);
       setMenuOpen(false);
-      /* setTimeout(() => {
-        setMenuOpen(false);
-        setMenuClosing(false);
-      }, 1000); */
       pageWrapperElement.current.classList.remove('fixed');
-    } else {
-      setMenuOpen(true);
-      pageWrapperElement.current.classList.add('fixed');
     }
+  }
+
+  function openMenu() {
+    setMenuOpen(true);
+    pageWrapperElement.current.classList.add('fixed');
+  }
+
+  function handleMenuButtonClick(e) {
+    if (isMenuOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+    e.stopPropagation();
   }
 
   useEffect(() => {
@@ -40,28 +47,38 @@ const Header = ({ pageWrapperElement }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   });
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      window.addEventListener('click', closeMenu);
+      return () => window.removeEventListener('click', closeMenu);
+    }
+    return undefined;
+  }, [isMenuOpen]);
+
   return (
     <header>
-      <div className={`fixed top-menu-bar ${!scrollY.isGoingUp ? 'hide' : ''} ${scrollY.isGoingUp && scrollY.offset > 20 ? 'shadow-lg' : ''} z-20 w-full h-16 lightBlueGradient`}>
+      <div className={`fixed top-menu-bar ${!scrollY.isGoingUp ? 'hide' : ''} ${scrollY.isGoingUp && scrollY.offset > 20 ? 'shadow-lg' : ''} z-20 w-full h-16 bg-white`}>
         <div className="flex items-center justify-between h-full inner-wrap">
           <img src="/logo-2.svg" alt="Logo" className="h-10" />
           <div />
           <Menu />
-          <button type="button" className="px-2 py-1 lg:hidden" onClick={handleMenuButtonClick} aria-expanded={isMenuOpen} aria-label="Open the menu">
-            {!isMenuOpen && <HambergerIcon className="h-8 text-white fill-current" aria-hidden="true" />}
-            {isMenuOpen && <CloseIcon className="h-8 text-white fill-current" aria-hidden="true" />}
+          <button type="button" className="px-2 py-1 md:hidden" onClick={handleMenuButtonClick} aria-expanded={isMenuOpen} aria-label="Open the menu">
+            {!isMenuOpen && <HambergerIcon className="h-8 text-gray-700 fill-current" aria-hidden="true" />}
+            {isMenuOpen && <CloseIcon className="h-8 text-gray-700 fill-current" aria-hidden="true" />}
           </button>
         </div>
       </div>
-      <div className="h-16 lightBlueGradient" />
+      <div className="h-16" />
       {isMenuOpen
       && (
-        <div className="absolute right-0 w-full h-full lg:hidden">
-          <div className="absolute w-full h-full bg-black bg-opacity-50" />
-          <div className="absolute right-0 w-full h-full bg-white sm:w-2/3">
+      <div className="absolute right-0 w-full h-full lg:hidden">
+        <div className="absolute w-full h-full bg-black bg-opacity-50" />
+        <div className="absolute right-0 w-full h-full bg-white sm:w-2/3">
+          <Escape callback={closeMenu}>
             <MobileMenu />
-          </div>
+          </Escape>
         </div>
+      </div>
       )}
     </header>
   );

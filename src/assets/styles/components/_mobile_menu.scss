@@ -1,0 +1,14 @@
+ul.mobile-menu {
+  li {
+    @apply w-full;
+
+    a {
+      @apply w-full block text-gray-800 text-lg px-2 py-3 text-center;
+
+      &:hover,
+      &:focus {
+        @apply text-gray-800 bg-gray-300;
+      }
+    }
+  }
+}

@@ -1,16 +1,17 @@
 html {
-  @apply font-sans;
+  @apply font-roboto;
 
   font-size: 16px;
   scroll-behavior: smooth;
 }
 
 a {
-  @apply font-semibold;
+  @apply font-medium;
   @apply no-underline;
   @apply text-blue-600;
 
-  &:hover {
+  &:hover,
+  &:focus {
     @apply text-blue-800;
   }
 }
@@ -64,14 +65,13 @@ h1,
 
 h2,
 .h2 {
-  @apply font-normal;
-  @apply text-4xl;
+  @apply font-normal text-4xl;
 }
 
 h3,
 .h3 {
   @apply font-normal;
-  @apply text-3xl;
+  @apply text-2xl;
 }
 
 h4,
@@ -133,6 +133,14 @@ pre {
     @apply bg-transparent;
     @apply block;
     @apply p-0;
+  }
+}
+
+div,
+p,
+ul {
+  &:focus {
+    @apply outline-none;
   }
 }
 

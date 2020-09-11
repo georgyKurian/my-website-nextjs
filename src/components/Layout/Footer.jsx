@@ -27,6 +27,7 @@ const Footer = () => (
     </div>
     <ul className="flex flex-col justify-center text-sm">
       <li>©Georgi 2020</li>
+      <li><a className="text-xs font-light text-gray-500 hover:text-white focus:text-white" href="https://www.freepik.com/vectors/technology">Technology vector created by stories - www.freepik.com</a></li>
     </ul>
   </footer>
 );

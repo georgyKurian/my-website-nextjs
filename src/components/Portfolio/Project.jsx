@@ -28,7 +28,7 @@ const Project = ({
         <div className="flex flex-wrap">
           {Array.isArray(tags)
             && tags.map(
-              (tag) => <span key={tag} className="inline-block px-2 py-px m-1 text-xs font-semibold text-gray-700 bg-gray-300 ">{tag}</span>,
+              (tag) => <span key={tag} className="skill-tag">{tag}</span>,
             )}
         </div>
       </div>
