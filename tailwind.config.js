@@ -51,5 +51,8 @@ module.exports = {
     borderWidth: ['responsive', 'hover', 'focus', 'last'],
     padding: ['responsive', 'hover', 'focus'],
   },
+  future: {
+    removeDeprecatedGapUtilities: true,
+  },
   plugins: [],
 };

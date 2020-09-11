@@ -59,7 +59,7 @@ const HomePage = ({
       <section className="section">
         <div id="projects-section" className="flex flex-col inner-wrap">
           <h2 className="text-center">Projects</h2>
-          <div className="mx-auto sm:w-full lg:lg:w-2/3">
+          <div className="w-10/12 mx-auto sm:w-full lg:lg:w-2/3">
             <div className="lg:mx-auto lg:w-2/3 grid sm:grid-cols-2 md:grid-cols-3 gap-4">
               {projectDataList && projectDataList.map((projectData) => (
                 <Project
