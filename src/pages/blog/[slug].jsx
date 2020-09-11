@@ -50,7 +50,7 @@ Post.propTypes = {
     formattedDate: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
     tags: PropTypes.arrayOf(PropTypes.string),
-    author: PropTypes.string.isRequired,
+    author: PropTypes.string,
     content: PropTypes.string.isRequired,
     cover_image: PropTypes.string,
   }).isRequired,
@@ -58,6 +58,7 @@ Post.propTypes = {
 
 DefaultLayout.defaultProps = {
   tags: null,
+  author: null,
   coverImage: null,
 };
 export default Post;
