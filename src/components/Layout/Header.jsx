@@ -57,7 +57,7 @@ const Header = ({ pageWrapperElement }) => {
 
   return (
     <header>
-      <div className={`fixed top-menu-bar ${!scrollY.isGoingUp ? 'hide' : ''} ${scrollY.isGoingUp && scrollY.offset > 20 ? 'shadow-lg' : ''} z-20 w-full h-16 bg-white`}>
+      <div className={`fixed top-menu-bar ${!scrollY.isGoingUp ? 'hide' : ''} ${scrollY.isGoingUp && scrollY.offset > 20 ? 'shadow-lg bg-secondaryColor' : ''} z-20 w-full h-16 bg-white`}>
         <div className="flex items-center justify-between h-full inner-wrap">
           <img src="/logo-2.svg" alt="Logo" className="h-10" />
           <div />

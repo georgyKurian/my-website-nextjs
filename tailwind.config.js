@@ -33,6 +33,7 @@ module.exports = {
         arial: ['Arial', 'sans-serif'],
       },
       colors: {
+        secondaryColor: '#1F2D41',
         themeGray: {
           default: 'EDEFF0',
           100: '#f5f5f5',
