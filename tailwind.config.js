@@ -11,6 +11,9 @@ module.exports = {
       whitelistPatternsChildren: [/carousel/, /html/],
     },
   },
+  corePlugins: {
+    container: false,
+  },
   theme: {
     screens: {
       sm: '640px',

@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
+import PropTypes from 'prop-types';
 
-export default function Escape({ callback, children }) {
+function Escape({ callback, children }) {
   function keydown(e) {
     if (e.keyCode === 27) {
       callback();
@@ -21,3 +22,14 @@ export default function Escape({ callback, children }) {
     </>
   );
 }
+
+Escape.propTypes = {
+  callback: PropTypes.func.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
+    PropTypes.string,
+  ]).isRequired,
+};
+
+export default Escape;

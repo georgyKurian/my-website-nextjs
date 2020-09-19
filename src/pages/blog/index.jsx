@@ -9,7 +9,7 @@ export default function BlogIndexPage({ allPosts }) {
       <Head>
         <meta name="description" content="Blog of Georgi Varghese Kurian" />
       </Head>
-      <div className="py-4 lg:py-16 inner-wrap">
+      <div className="py-4 lg:py-16 container">
         <div className="mx-auto lg:w-2/3">
           <h1 className="text-center lg:pb-8">Blog</h1>
           {allPosts.map((post) => (

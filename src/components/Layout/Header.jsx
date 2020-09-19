@@ -7,7 +7,7 @@ import Escape from '../Escape';
 
 const { default: Menu } = require('./Menu');
 
-const Header = ({ pageWrapperElement }) => {
+const Header = ({ pageWrapperElement, isHeaderTransparent }) => {
   const [scrollY, setScrollY] = useState({ offset: 0, isGoingUp: true });
   const [isMenuOpen, setMenuOpen] = useState(false);
   // const [isMenuClosing, setMenuClosing] = useState(false);
@@ -57,18 +57,18 @@ const Header = ({ pageWrapperElement }) => {
 
   return (
     <header>
-      <div className={`fixed top-menu-bar ${!scrollY.isGoingUp ? 'hide' : ''} ${scrollY.isGoingUp && scrollY.offset > 20 ? 'shadow-lg bg-secondaryColor' : ''} z-20 w-full h-16 bg-white`}>
-        <div className="flex items-center justify-between h-full inner-wrap">
+      <div className={`fixed top-menu-bar ${!scrollY.isGoingUp ? 'hide' : ''} ${scrollY.offset > 0 ? 'shadow-lg bg-secondaryColor' : ''} ${!isHeaderTransparent ? ' bg-secondaryColor' : ''} z-20 w-full h-16`}>
+        <div className="container flex items-center justify-between h-full">
           <img src="/logo-2.svg" alt="Logo" className="h-10" />
           <div />
           <Menu />
           <button type="button" className="px-2 py-1 md:hidden" onClick={handleMenuButtonClick} aria-expanded={isMenuOpen} aria-label="Open the menu">
-            {!isMenuOpen && <HambergerIcon className="h-8 text-gray-700 fill-current" aria-hidden="true" />}
+            {!isMenuOpen && <HambergerIcon className="h-8 text-gray-300 fill-current" aria-hidden="true" />}
             {isMenuOpen && <CloseIcon className="h-8 text-gray-700 fill-current" aria-hidden="true" />}
           </button>
         </div>
       </div>
-      <div className="h-16" />
+      {!isHeaderTransparent && (<div className="h-16" />)}
       {isMenuOpen
       && (
       <div className="absolute right-0 w-full h-full lg:hidden">
@@ -91,6 +91,7 @@ Header.propTypes = {
       current: PropTypes.any,
     }),
   ]).isRequired,
+  isHeaderTransparent: PropTypes.bool.isRequired,
 };
 
 export default Header;
