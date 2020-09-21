@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const Award = ({
   title, description, awardedBy, date,
 }) => (
-  <article className="flex flex-col items-center w-full overflow-hidden bg-gray-300 border border-gray-300 rounded-lg shadow">
+  <article className="flex flex-col items-center w-full overflow-hidden bg-gray-300 border border-gray-300 rounded-lg shadow transform ease-in-out hover:scale-105 hover:shadow-lg">
     <div className="w-1/5">
       <div className="relative" style={{ paddingTop: '100%' }}>
         <img
@@ -21,7 +21,7 @@ const Award = ({
           <p className="m-0 text-xs text-gray-700">{description}</p>
         </div>
         <div className="flex items-end justify-between">
-          <div className="flex flex-col mt-2">
+          <div className="flex flex-col mt-2 leading-tight">
             <span className="m-0 text-xs text-gray-600">Awarded by,</span>
             <span className="m-0 text-xs text-gray-600">{awardedBy}</span>
           </div>
