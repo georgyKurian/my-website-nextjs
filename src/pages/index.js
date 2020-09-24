@@ -63,8 +63,8 @@ const HomePage = ({
       <section className="bg-gray-100 section">
         <div id="projects-section" className="container flex flex-col">
           <h2 className="text-center">Projects</h2>
-          <div className="w-10/12 mx-auto my-2 sm:w-full lg:lg:w-2/3">
-            <div className="bg-gray-100 lg:mx-auto lg:w-2/3 grid sm:grid-cols-2 sm:gap-4 md:gap-6 lg:gap-8">
+          <div className="mx-auto my-2 sm:w-full lg:lg:w-2/3">
+            <div className="bg-gray-100 lg:mx-auto lg:w-2/3 grid sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
               {projectDataList && projectDataList.map((projectData) => (
                 <Project
                   key={projectData.title}
@@ -84,7 +84,7 @@ const HomePage = ({
       <section className="section">
         <div id="skills-section" className="container flex flex-col">
           <h2 className="text-center">Skills</h2>
-          <div className={`w-10/12 my-2 mx-auto sm:w-full lg:lg:w-2/3 ${entry ? 'loaded' : ''}`} ref={skillsSectionRef}>
+          <div className={`w-full my-2 mx-auto sm:w-full lg:lg:w-2/3 ${entry ? 'loaded' : ''}`} ref={skillsSectionRef}>
             <div className="lg:mx-auto lg:w-2/3 grid sm:grid-cols-2 md:grid-cols-3 gap-4">
               {Object.keys(skillData).map((skillGroupName) => (
                 <SkillGroup
@@ -101,7 +101,7 @@ const HomePage = ({
       <section className="bg-gray-100 section">
         <div id="award-section" className="container flex flex-col">
           <h2 className="text-center">Awards</h2>
-          <div className="w-10/12 mx-auto my-2 sm:w-full lg:lg:w-2/3">
+          <div className="mx-auto my-2 sm:w-full lg:lg:w-2/3">
             <div className="lg:mx-auto lg:w-2/3 grid sm:grid-cols-2 md:grid-cols-3 gap-4">
               {awardDataList && awardDataList.map((awardData) => (
                 <Award
