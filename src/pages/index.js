@@ -33,7 +33,7 @@ const HomePage = ({
                 Hi, I’m Georgi Kurian
                 <span className="sr-only"> and this is my website</span>
               </h1>
-              <p className="mt-0 ml-1 text-2xl text-center text-gray-500">I am a full-stack web developer</p>
+              <p className="mt-0 ml-1 text-2xl text-center text-gray-400">I am a full-stack web developer</p>
             </div>
             <div className="w-full py-4 col md:w-1/2">
               <img src="/Programming-amico.svg" alt="" role="presentation" className="w-full mx-auto sm:w-2/3 md:w-8/12" />

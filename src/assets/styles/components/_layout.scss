@@ -1,5 +1,6 @@
 .container {
   @apply px-12 mx-auto;
+
   @screen sm {
     width: 640px;
     @apply px-12;
