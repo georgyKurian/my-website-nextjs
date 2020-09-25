@@ -14,7 +14,7 @@ const Post = ({ post, morePosts, preview }) => {
   return (
     <DefaultLayout title={post.title} mainStyle="bg-gray-100">
 
-      <div id="post-content" className="inner-wrap">
+      <div id="post-content" className="container">
         <article className="flex flex-col px-5 py-5 mx-auto my-4 bg-white lg:mb-8 lg:mt-6 shadow-xs lg:pb-16 md:w-9/12 lg:w-8/12 xl:px-10 xl:w-7/12">
           <span className="xl:pt-10 text-themeGray-500">
             <span className="sr-only">Posted Date :</span>

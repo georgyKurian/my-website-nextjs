@@ -7,8 +7,8 @@ const imageDir = '/projects/';
 const Project = ({
   title, description, tags, git, link, image,
 }) => (
-  <article className="flex flex-col flex-wrap w-full overflow-hidden bg-white border border-gray-300 rounded-lg shadow-lg">
-    <div className="flex items-center h-32 bg-yellow-600">
+  <article className="flex flex-col flex-wrap w-full overflow-hidden bg-white rounded-lg shadow-lg hover:shadow-xl transform ease-in-out hover:-translate-y-1">
+    <div className="flex items-center h-32 bg-secondaryColor">
       {image
         && (
           <img
@@ -19,9 +19,9 @@ const Project = ({
           />
         )}
     </div>
-    <div className="flex flex-col justify-between flex-1 w-full px-3 py-3 border-r-2 border-gray-100">
+    <div className="flex flex-col justify-between flex-1 w-full py-3 border-r-2 border-gray-100 col">
       <div className="">
-        <h4 className="text-center">{title}</h4>
+        <h4 className="text-center h5">{title}</h4>
         <p className="text-base text-gray-700">{description}</p>
       </div>
       <div>

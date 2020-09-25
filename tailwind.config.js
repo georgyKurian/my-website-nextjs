@@ -11,6 +11,9 @@ module.exports = {
       whitelistPatternsChildren: [/carousel/, /html/],
     },
   },
+  corePlugins: {
+    container: false,
+  },
   theme: {
     screens: {
       sm: '640px',
@@ -33,6 +36,7 @@ module.exports = {
         arial: ['Arial', 'sans-serif'],
       },
       colors: {
+        secondaryColor: '#1F2D41',
         themeGray: {
           default: 'EDEFF0',
           100: '#f5f5f5',
@@ -50,6 +54,9 @@ module.exports = {
   variants: {
     borderWidth: ['responsive', 'hover', 'focus', 'last'],
     padding: ['responsive', 'hover', 'focus'],
+  },
+  future: {
+    removeDeprecatedGapUtilities: true,
   },
   plugins: [],
 };
