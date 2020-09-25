@@ -7,7 +7,7 @@ const imageDir = '/projects/';
 const Project = ({
   title, description, tags, git, link, image,
 }) => (
-  <article className="flex flex-col flex-wrap w-full overflow-hidden bg-white rounded-lg shadow-lg">
+  <article className="flex flex-col flex-wrap w-full overflow-hidden bg-white rounded-lg shadow-lg hover:shadow-xl transform ease-in-out hover:-translate-y-1">
     <div className="flex items-center h-32 bg-secondaryColor">
       {image
         && (

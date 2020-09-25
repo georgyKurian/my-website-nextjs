@@ -63,8 +63,8 @@ const HomePage = ({
       <section className="bg-gray-100 section">
         <div id="projects-section" className="container flex flex-col">
           <h2 className="text-center">Projects</h2>
-          <div className="mx-auto my-2 sm:w-full lg:lg:w-2/3">
-            <div className="bg-gray-100 lg:mx-auto lg:w-2/3 grid sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
+          <div className="w-10/12 mx-auto my-2 sm:w-full lg:lg:w-2/3">
+            <div className="bg-gray-100 lg:mx-auto lg:w-2/3 grid sm:grid-cols-2 gap-4 md:grid-cols-3 md:gap-6 lg:gap-8">
               {projectDataList && projectDataList.map((projectData) => (
                 <Project
                   key={projectData.title}
