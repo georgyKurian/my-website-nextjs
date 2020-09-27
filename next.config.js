@@ -12,16 +12,5 @@ module.exports = withPWA(
     },
     distDir: 'dist',
     reactStrictMode: true,
-    webpack: (config) => {
-      config.module.rules.push({
-        test: /\.(png|jpe?g)$/,
-        loader: 'file-loader',
-      });
-      config.module.rules.push({
-        test: /\.svg$/,
-        use: ['@svgr/webpack'],
-      });
-      return config;
-    },
   }),
 );
