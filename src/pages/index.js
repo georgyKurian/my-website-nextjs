@@ -9,7 +9,7 @@ import Project from '../components/Portfolio/Project';
 import WorkExperience from '../components/Portfolio/WorkExperience';
 import useIntersect from '../components/Layout/useIntersect';
 import Award from '../components/Portfolio/Awards';
-import CurvedBorderSvg from '../assets/images/curved-vector.svg';
+import CurvedBorderSvg from '../assets/images/curved-vector.svg?sprite';
 
 const HomePage = ({
   skillData, projectDataList, workExperienceDataList, awardDataList,
@@ -40,7 +40,9 @@ const HomePage = ({
             </div>
           </div>
         </section>
-        <CurvedBorderSvg className="w-full h-6 text-white sm:h-8 md:h-10 lg:h-12" />
+        <div className="object-fill w-full">
+          <CurvedBorderSvg className="w-full text-white" />
+        </div>
       </div>
 
       <section className="section">
