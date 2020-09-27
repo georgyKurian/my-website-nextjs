@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import BriefCaseSVG from '../../assets/images/icons/briefcase.svg';
+import BriefCaseSVG from '../../assets/images/icons/briefcase.svg?sprite';
 
 const WorkExperience = ({
   companyName, position, timeline, companyUrl,

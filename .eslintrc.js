@@ -31,5 +31,6 @@ module.exports = {
     'react/destructuring-assignment': [1, 'always', { ignoreClassFields: true }],
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/jsx-props-no-spreading': 'off',
+    'import/no-unresolved': [2, { ignore: ['\\.(png|jpg|svg)\\?(url|original|include|inline|webp|sprite)$'] }],
   },
 };

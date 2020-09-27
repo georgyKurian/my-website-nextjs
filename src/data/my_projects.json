@@ -14,14 +14,19 @@
     "git": "https://github.com/georgyKurian/e-commerce-client-next",
     "link": "https://e-commerce-client-next.herokuapp.com/",
     "image": {
-      "file": "e-commerce-ui.jpg",
+      "file": "e-commerce-ui.webp",
       "alt": "e-commerce app screenshot"
     }
   },
   {
     "title": "Todo App (MERN)",
     "description": "A simple todo app for exploring technologies.",
-    "tags": ["node.js", "react.js", "express.js", "mongodb"],
+    "tags": [
+      "node.js",
+      "react.js",
+      "express.js",
+      "mongodb"
+    ],
     "git": "https://github.com/georgyKurian/mern-todo-app",
     "link": ""
   }

@@ -25,7 +25,7 @@ const DefaultLayout = ({
           }}
         />
         <title>{`${title} | Georgi Kurian's Website`}</title>
-        <Meta title={title} description={description} />
+        <Meta title={`${title}`} description={description} />
       </Head>
 
       <div className="flex flex-col lg:static w-full" style={{ minHeight: '100vh' }} ref={wrapperElementRef}>
