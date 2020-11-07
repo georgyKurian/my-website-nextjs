@@ -19,6 +19,22 @@
     }
   },
   {
+    "title": "VS Code : Laravel Ide Helper",
+    "description": "VS Code extension to generate laravel framework helper files.",
+    "tags": [
+      "node.js",
+      "TypeScript",
+      "vscode",
+      "mocha.js"
+    ],
+    "git": "https://github.com/georgyKurian/vscode-laravel-ide-helper",
+    "link": "https://marketplace.visualstudio.com/items?itemName=georgykurian.laravel-ide-helper",
+    "image": {
+      "file": "vscode-laravel-ide-helper.webp",
+      "alt": "VS Code Laravel Ide Helper webpage screenshot"
+    }
+  },
+  {
     "title": "Todo App (MERN)",
     "description": "A simple todo app for exploring technologies.",
     "tags": [
