@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useRef, useEffect } from 'react';
+import Image from 'next/image';
 import DefaultLayout from '../components/Layout/DefaultLayout';
 import {
   getSkillsData, getProjectsData, getWorkExperienceData, getAwardData,
@@ -36,7 +37,16 @@ const HomePage = ({
               <p className="mt-0 ml-1 text-2xl text-center text-gray-400">I am a full-stack web developer</p>
             </div>
             <div className="w-full py-4 col md:w-1/2">
-              <img src="/Programming-amico.svg" alt="" role="presentation" className="w-full mx-auto sm:w-2/3 md:w-8/12" />
+              <div className="object-fill w-full mx-auto sm:w-2/3 md:w-8/12">
+                <Image
+                  src="/Programming-amico.svg"
+                  alt=""
+                  role="presentation"
+                  width={500}
+                  height={500}
+                  objectFit="contain"
+                />
+              </div>
             </div>
           </div>
         </section>
