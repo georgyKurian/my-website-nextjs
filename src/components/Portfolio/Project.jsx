@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import PropTypes from 'prop-types';
 import GitHubIcon from '../../assets/images/icons/github.svg?sprite';
 import LinkSVGIcon from '../../assets/images/icons/Link.svg?sprite';
@@ -11,11 +12,13 @@ const Project = ({
     <div className="flex items-center h-32 bg-secondaryColor">
       {image
         && (
-          <img
-            loading="lazy"
-            className="object-cover w-full h-full"
+          <Image
             src={imageDir + image.file}
             alt={image.alt}
+            role="presentation"
+            width={350}
+            height={180}
+            objectFit="cover"
           />
         )}
     </div>
