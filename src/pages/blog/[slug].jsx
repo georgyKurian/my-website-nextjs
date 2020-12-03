@@ -12,11 +12,11 @@ const Post = ({ post, morePosts, preview }) => {
   }
 
   return (
-    <DefaultLayout title={post.title} mainStyle="bg-gray-100">
+    <DefaultLayout title={post.title} description={post.description} mainStyle="bg-gray-100">
 
       <div id="post-content" className="container">
         <article className="flex flex-col px-5 py-5 mx-auto my-4 bg-white lg:mb-8 lg:mt-6 shadow-xs lg:pb-16 md:w-9/12 lg:w-8/12 xl:px-10 xl:w-7/12">
-          <span className="xl:pt-10 text-themeGray-500">
+          <span className="xl:pt-10 text-themeGray-700">
             <span className="sr-only">Posted Date :</span>
             <time dateTime={post.date}>{post.formattedDate}</time>
           </span>
@@ -52,6 +52,7 @@ Post.propTypes = {
     tags: PropTypes.arrayOf(PropTypes.string),
     author: PropTypes.string,
     content: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
     cover_image: PropTypes.string,
   }).isRequired,
 };
@@ -71,6 +72,7 @@ export async function getStaticProps({ params }) {
     'tags',
     'author',
     'content',
+    'description',
     'cover_image',
   ]);
   const content = await markdownToHtml(post.content || '');

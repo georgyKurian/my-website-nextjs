@@ -2,6 +2,7 @@ import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
 import moment from 'moment';
+import readingTime from 'reading-time';
 
 const postsDirectory = join(process.cwd(), '_posts');
 
@@ -13,7 +14,7 @@ export function getPostBySlug(slug, fields = []) {
   const realSlug = slug.replace(/\.md$/, '');
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
-  const { data, content } = matter(fileContents);
+  const { data, content, excerpt } = matter(fileContents, { excerpt: true });
   const items = {};
 
   // Ensure only the minimal needed data is exposed
@@ -28,6 +29,14 @@ export function getPostBySlug(slug, fields = []) {
     if (field === 'date') {
       const date = moment(data[field]);
       items.formattedDate = date.format('MMM Do, YYYY');
+    }
+
+    if (field === 'excerpt') {
+      items.excerpt = excerpt;
+    }
+
+    if (field === 'readTime') {
+      items.readTime = readingTime(content);
     }
 
     if (data[field]) {

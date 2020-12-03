@@ -5,11 +5,8 @@ import { getAllPosts } from '../../api/BlogAPI';
 
 export default function BlogIndexPage({ allPosts }) {
   return (
-    <DefaultLayout title="Blog">
-      <Head>
-        <meta name="description" content="Blog of Georgi Varghese Kurian" />
-      </Head>
-      <div className="py-4 lg:py-16 container">
+    <DefaultLayout title="Blog" description="Blog posts of Georgi Varghese Kurian">
+      <div className="container py-4 lg:py-16">
         <div className="mx-auto lg:w-2/3">
           <h1 className="text-center lg:pb-8">Blog</h1>
           {allPosts.map((post) => (
@@ -24,8 +21,17 @@ export default function BlogIndexPage({ allPosts }) {
                       <h2 className="mb-2 font-medium text-gray-800 h4 focus:underline hover:underline">{post.title}</h2>
                     </a>
                   </Link>
-                  <p className="mt-0 mb-2 text-sm text-gray-600">{post.description}</p>
-                  <span className="text-themeGray-600"><time dateTime={post.date}>{post.formattedDate}</time></span>
+                  <p className="mt-0 mb-2 text-sm text-gray-600">{post.excerpt}</p>
+
+                  <div className="flex">
+                    <div>
+                      <span className="text-themeGray-600"><time dateTime={post.date}>{post.formattedDate}</time></span>
+                    </div>
+                    <div className="mx-2"><span>.</span></div>
+                    <div>
+                      <span className="text-themeGray-600"><span>{post.readTime.text}</span></span>
+                    </div>
+                  </div>
                 </div>
 
               </div>
@@ -44,7 +50,8 @@ export async function getStaticProps() {
     'slug',
     'author',
     'coverImage',
-    'description',
+    'readTime',
+    'excerpt',
   ]);
 
   return {

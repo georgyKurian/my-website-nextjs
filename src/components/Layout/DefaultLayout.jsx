@@ -6,7 +6,7 @@ import Footer from './Footer';
 import Meta from '../Meta';
 
 const DefaultLayout = ({
-  headerContent, children, title, description, mainStyle, isHeaderTransparent
+  headerContent, children, title, description, mainStyle, isHeaderTransparent = false
 }) => {
   const wrapperElementRef = useRef(null);
   return (
@@ -51,11 +51,10 @@ DefaultLayout.propTypes = {
 };
 
 DefaultLayout.defaultProps = {
-  mainStyle: '',
   headerContent: null,
   children: '',
   title: '',
-  isHeaderTransparent: false,
+  mainStyle: '',
 };
 
 export default DefaultLayout;
