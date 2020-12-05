@@ -1,11 +1,12 @@
 ---
-title: Basic Web Accessibility Techniques
+title: How to grow as a developer?
 subtitle: Crash course
 cover_image: /assets/img/post-cover-image-1.png
 featured: true
 section: content
 tags: [accessibility]
-date: "2020-09-09T00:00:00Z"
+date: "2020-12-03T00:00:00Z"
+published: true
 description: "How to build an accessible web application"
 ---
 

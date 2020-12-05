@@ -7,7 +7,7 @@ import readingTime from 'reading-time';
 const postsDirectory = join(process.cwd(), '_posts');
 
 export function getPostSlugs() {
-  return fs.readdirSync(postsDirectory);
+  return fs.readdirSync(postsDirectory).filter((filename) => filename.match(/\.md$/g));
 }
 
 export function getPostBySlug(slug, fields = []) {
@@ -18,31 +18,32 @@ export function getPostBySlug(slug, fields = []) {
   const items = {};
 
   // Ensure only the minimal needed data is exposed
-  fields.forEach((field) => {
-    if (field === 'slug') {
-      items[field] = realSlug;
-    }
-    if (field === 'content') {
-      items[field] = content;
-    }
+  fields
+    .forEach((field) => {
+      if (field === 'slug') {
+        items[field] = realSlug;
+      }
+      if (field === 'content') {
+        items[field] = content;
+      }
 
-    if (field === 'date') {
-      const date = moment(data[field]);
-      items.formattedDate = date.format('MMM Do, YYYY');
-    }
+      if (field === 'date') {
+        const date = moment(data[field]);
+        items.formattedDate = date.format('MMM Do, YYYY');
+      }
 
-    if (field === 'excerpt') {
-      items.excerpt = excerpt;
-    }
+      if (field === 'excerpt') {
+        items.excerpt = excerpt;
+      }
 
-    if (field === 'readTime') {
-      items.readTime = readingTime(content);
-    }
+      if (field === 'readTime') {
+        items.readTime = readingTime(content);
+      }
 
-    if (data[field]) {
-      items[field] = data[field];
-    }
-  });
+      if (data[field]) {
+        items[field] = data[field];
+      }
+    });
 
   return items;
 }
