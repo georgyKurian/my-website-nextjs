@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.12.9",
+    "@mailchimp/mailchimp_marketing": "^3.0.25",
     "cross-env": "^7.0.3",
     "gray-matter": "^4.0.2",
     "imagemin-mozjpeg": "^9.0.0",
