@@ -12,11 +12,13 @@
   },
   "dependencies": {
     "@babel/core": "^7.12.9",
+    "@bugsnag/js": "^7.5.4",
     "@mailchimp/mailchimp_marketing": "^3.0.25",
     "cross-env": "^7.0.3",
     "gray-matter": "^4.0.2",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-svgo": "^8.0.0",
+    "isomorphic-unfetch": "^3.1.0",
     "moment": "^2.29.1",
     "next": "^10.0.3",
     "next-optimized-images": "^2.6.2",
