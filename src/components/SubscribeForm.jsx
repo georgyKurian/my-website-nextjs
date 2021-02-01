@@ -1,7 +1,7 @@
 import fetch from 'isomorphic-unfetch';
 import { useState } from 'react';
 
-export default function subscribeForm() {
+export default function SubscribeForm() {
   const [emailAddress, setEmail] = useState('');
   const [{ errorMessage, successMessage }, setMessage] = useState({});
 

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import HambergerIcon from '../../assets/images/icons/hamberger.svg?sprite';
-import CloseIcon from '../../assets/images/icons/close.svg?sprite';
+import HambergerIcon from '@assets/images/icons/hamburger.svg?sprite';
+import CloseIcon from '@assets/images/icons/close.svg?sprite';
 import MobileMenu from './MobileMenu';
 import Escape from '../Escape';
 

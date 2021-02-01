@@ -3,7 +3,6 @@ import Head from 'next/head';
 import { useRef } from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import Meta from '../Meta';
 
 const DefaultLayout = ({
   headerContent, children, title, description, mainStyle, isHeaderTransparent = false
@@ -11,8 +10,7 @@ const DefaultLayout = ({
   const wrapperElementRef = useRef(null);
   return (
     <>
-      <Head>
-        { /* Global site tag (gtag.js) - Google Analytics */ }
+      <Head>       
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80050463-3"></script>
         <script
           dangerouslySetInnerHTML={{
@@ -25,7 +23,6 @@ const DefaultLayout = ({
           }}
         />
         <title>{`${title} | Georgi Kurian's Website`}</title>
-        <Meta title={`${title}`} description={description} />
       </Head>
 
       <div className="flex flex-col lg:static w-full" style={{ minHeight: '100vh' }} ref={wrapperElementRef}>

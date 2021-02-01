@@ -1,7 +1,14 @@
-import '../assets/styles/main.scss';
+import { ThemeProvider } from 'next-themes';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+import '@assets/styles/main.scss';
+
+import 'typeface-open-sans';
+import 'typeface-merriweather';
+
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <ThemeProvider defaultTheme="system" enableSystem={false} attribute="class">
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
 }
-
-export default MyApp;

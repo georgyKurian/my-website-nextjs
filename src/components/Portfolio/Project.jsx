@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import PropTypes from 'prop-types';
-import GitHubIcon from '../../assets/images/icons/github.svg?sprite';
-import LinkSVGIcon from '../../assets/images/icons/Link.svg?sprite';
+import GitHubIcon from '@assets/images/icons/github.svg?sprite';
+import LinkSVGIcon from '@assets/images/icons/Link.svg?sprite';
 
 const imageDir = '/projects/';
 

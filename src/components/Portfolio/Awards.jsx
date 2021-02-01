@@ -14,18 +14,18 @@ const Award = ({
         />
       </div>
     </div>
-    <div className="flex flex-col justify-between flex-1 w-full px-3 pb-3 border-gray-100">
+    <div className="flex flex-col justify-between flex-1 w-full px-4 pb-4 border-gray-100">
       <div className="flex flex-col justify-between h-full">
         <div>
           <h3 className="text-center h5">{title}</h3>
-          <p className="m-0 text-xs text-gray-700">{description}</p>
+          <p className="m-0 text-sm leading-tight text-center text-gray-700">{description}</p>
         </div>
-        <div className="flex items-end justify-between">
-          <div className="flex flex-col mt-2 leading-tight">
-            <span className="m-0 text-xs text-gray-600">Awarded by,</span>
-            <span className="m-0 text-xs text-gray-600">{awardedBy}</span>
+        <div className="flex items-end mt-4 justify-between text-sm leading-tight">
+          <div className="flex flex-col leading-tight">
+            <span className="m-0 text-gray-600">Awarded by,</span>
+            <span className="m-0 text-gray-600">{awardedBy}</span>
           </div>
-          <div className="m-0 text-xs text-gray-600">
+          <div className="m-0 text-gray-600">
             <span>{date}</span>
           </div>
         </div>

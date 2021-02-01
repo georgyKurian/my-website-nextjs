@@ -13,7 +13,7 @@ const MobileMenu = () => {
       <nav className="">
         <ul ref={mobileMenuRef} className="flex flex-col items-center justify-center text-lg mobile-menu" tabIndex="-1">
           <li><Link href="/"><a className={linkClasses}>Home</a></Link></li>
-          <li><Link href="/blog"><a className={linkClasses}>Blog</a></Link></li>
+          <li><Link href="/posts"><a className={linkClasses}>Blog</a></Link></li>
           <li><Link href="/about"><a className={linkClasses}>About</a></Link></li>
           <li><Link href="/#contact"><a className={linkClasses}>Contact</a></Link></li>
         </ul>

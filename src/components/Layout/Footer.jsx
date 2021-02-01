@@ -1,7 +1,7 @@
-import GitHubLogo from '../../assets/images/icons/github.svg?sprite';
-import EmailLogo from '../../assets/images/icons/email.svg?sprite';
-import LinkedinLogo from '../../assets/images/icons/linkedin.svg?sprite';
-import StackOverFlowLogo from '../../assets/images/icons/stackoverflow.svg?sprite';
+import GitHubLogo from '@assets/images/icons/github.svg?sprite';
+import EmailLogo from '@assets/images/icons/email.svg?sprite';
+import LinkedinLogo from '@assets/images/icons/linkedin.svg?sprite';
+import StackOverFlowLogo from '@assets/images/icons/stackoverflow.svg?sprite';
 
 const cssClasses = 'w-1/5 sm:w-20 p-2 hover:p-1 focus:p-1 opacity-75 hover:opacity-100 focus:opacity-100 m-1';
 

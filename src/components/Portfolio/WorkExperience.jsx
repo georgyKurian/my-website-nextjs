@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import BriefCaseSVG from '../../assets/images/icons/briefcase.svg?sprite';
+import BriefCaseSVG from '@assets/images/icons/briefcase.svg?sprite';
 
 const WorkExperience = ({
   companyName, position, timeline, companyUrl,
 }) => (
-  <div className="flex my-2 bg-blue-800 shadow transform ease-in-out hover:scale-105 hover:shadow-lg lg:my-4" style={{ borderRadius: '10rem 1.5rem 1.5rem 10rem' }}>
+  <div className="flex my-2 bg-secondaryColor shadow transform ease-in-out hover:scale-105 hover:shadow-lg lg:my-4" style={{ borderRadius: '10rem 1.5rem 1.5rem 10rem' }}>
     <div className="flex flex-col items-center">
       <div className="my-auto border-4 border-transparent rounded-full">
         <div className="h-20 p-5 bg-white rounded-full">
-          <BriefCaseSVG className="h-full text-blue-800 fill-current" aria-hidden="true" />
+          <BriefCaseSVG className="h-full text-secondaryColor fill-current" aria-hidden="true" />
         </div>
       </div>
     </div>
